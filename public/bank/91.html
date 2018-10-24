@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that  outputs to an HTML document<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 279px;"><p id="stemText" class="stemFont">An HTML page contains the following:
+
+<br><br>&lt;div id="result"&gt;&lt;/div&gt;
+<br>&lt;script&gt;
+<br>//Add code here
+<br>&lt;/script&gt;
+
+<br><br>You need to add code to the &lt;script&gt; tag so that the current date is displayed on the screen and refreshed every second.
+
+<br><br>Which code snippet should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio2" cid="c1608" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382091" value="$$abMTA_98-382-091_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">setInterval(function() {
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let d = new Date();
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementByClassName("result").innerHTML = d;
+}, 1000);</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1607" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382091" value="$$abMTA_98-382-091_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">setInterval(function() {
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let d = new Date();
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").innerHTML = d;
+}, 10000);</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1606" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382091" value="$$abMTA_98-382-091_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">setInterval(function() {
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let d = new Date();
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").innerHTML = d;
+}, 1000);</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1609" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382091" value="$$abMTA_98-382-091_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">function printDate() {
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 1; i &lt;= (24*60*60); i++) {
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let d = new Date();
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").innerHTML = d;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     }
+}
+printDate();</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The code snippet that must be added to the &lt;script&gt; tag is:
+
+<br><br>setInterval(function() {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   let d = new Date();
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   document.getElementById("result").innerHTML = d;
+<br>}, 1000);
+
+<br><br>The JavaScript setInterval() function repeatedly calls a code snippet with a fixed time interval. The time interval is given in milliseconds. The first parameter to setInterval() is the function:
+
+<br><br> function() {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   let d = new Date();
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   document.getElementById("result").innerHTML = d;
+<br>}
+
+<br><br>The function retrieves the current date and places it in the &lt;div&gt; tag identified by its ID result. 
+
+<br><br>The second parameter to setInterval() is 1000, which is the time delay in milliseconds. This value converts to 1 second. With that code snippet, the current date (down to the second) is displayed on the screen and refreshed every second.
+
+<br><br>You should not use the following code snippet because although it retrieves the current date, it refreshes every 10 seconds (10000):
+
+<br><br>setInterval(function() {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   let d = new Date();
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   document.getElementById("result").innerHTML = d;
+<br>}, 10000);
+
+<br><br>You should not use the following code snippet because it retrieves the result by class name (getElementByClassName("result")) instead of by ID. For that reason, nothing will be displayed. The &lt;div&gt; tag does not have a CSS class named result, but it does have an ID named result:
+
+<br><br>setInterval(function() {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   let d = new Date();
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   document.getElementByClassName("result").innerHTML = d;
+<br>}, 1000);
+
+<br><br>You should not use the following code snippet because even if the for loop is iterating 86400 times, only one display shows on the screen, and that is not refreshed every second:
+
+<br><br>function printDate() {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     for (var i = 1; i &lt;= (24*60*60); i++) {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           let d = new Date();
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;           document.getElementById("result").innerHTML = d;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     }
+<br>}
+<br>printDate();
+<br><br><p>Objective:</p><p>Interact with the Document Object Model</p><p>SubObjective:</p><p>Complete and debug code that  outputs to an HTML document<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>WindowOrWorkerGlobalScope.setInterval()</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Element.innerHTML</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

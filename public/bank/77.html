@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Identify and construct the Document Object Model (DOM) tree<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 159px;"><p id="stemText" class="stemFont">You are writing code that needs to do the following:
+
+<br><br>* Ask the user for the number of records to display per page.
+<br>* Use that number as a part of a loop counter to display additional data.
+
+<br><br>Which statement should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c1404" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382077" value="$$abMTA_98-382-077_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">var count = window.alert("How many records do you need to display per page?");</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1402" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382077" value="$$abMTA_98-382-077_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">var count = window.prompt("How many records do you need to display per page?");</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1401" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382077" value="$$abMTA_98-382-077_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">var count = parseInt(window.prompt("How many records do you need to display per page?"));</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1403" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382077" value="$$abMTA_98-382-077_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">var count = window.confirm("How many records do you need to display per page?");</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">You need to use the following statement to ask the user for the number of records per page:
+
+<br><br>var count = parseInt(window.prompt("How many records do you need to display per page?"));
+
+<br><br>The prompt window displays a text box in which the user can enter a value. However, that value is always returned as a string. For example, if the user types 25, the return value is "25". Since this value will be used as a loop counter, it is important to convert it from string to numeric. The parseInt() function helps you accomplish that. Therefore, the following statement is not sufficient:
+
+<br><br>var count = window.prompt("How many records do you need to display per page?");
+
+<br><br>The following statement displays a window with an OK button and the user does not have a place to enter the value:
+
+<br><br>var count = window.alert("How many records do you need to display per page?");
+
+<br><br>Using window.confirm() will display the text with the OK and Cancel buttons, but the user is still not able to enter a number:
+
+<br><br>var count = window.confirm("How many records do you need to display per page?");
+<br><br><p>Objective:</p><p>Interact with the Document Object Model</p><p>SubObjective:</p><p>Identify and construct the Document Object Model (DOM) tree<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Window</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>parseInt()</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code to perform input validation<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 279px;"><p id="stemText" class="stemFont">In a form, you need to create an input box that satisfies the following requirements:
+
+<br><br>* The field cannot be empty.
+<br>* The user is expected to provide the name of a programming language. Supported languages are: JavaScript, Python, Smalltalk, and Java.
+<br>* The first letter of the language is case insensitive.
+<br>* The label should have a star marking a required field. The user should see "This field is required" when hovering over the star.
+<br>* When there is no match to a supported language name, the text should turn red.
+
+<br><br>Which three pieces of code should you use in your solution?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="checkbox5" tabindex="1" cid="c1947" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382111" value="$$abMTA_98-382-111_option5" style="display:block;">
+<span id="span_checkbox5" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;input type="text" id="lang" name="language" required
+        pattern="JavaScript|Python|Smalltalk|Java"&gt;</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="checkbox0" tabindex="1" cid="c1942" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382111" value="$$abMTA_98-382-111_option0" style="display:block;">
+<span id="span_checkbox0" style="position: relative !important;display: block;" class="spanSingleChoice">input:focus:invalid {
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: red;
+}</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox6" tabindex="1" cid="c1948" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382111" value="$$abMTA_98-382-111_option6" style="display:block;">
+<span id="span_checkbox6" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;input type="text" id="lang" name="language" pattern="[A-Z][A-Za-z' -]+"&gt;</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox3" tabindex="1" cid="c1945" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382111" value="$$abMTA_98-382-111_option3" style="display:block;">
+<span id="span_checkbox3" style="position: relative !important;display: block;" class="spanSingleChoice">input#language:focus:invalid {
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: red;
+}</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox4" tabindex="1" cid="c1946" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382111" value="$$abMTA_98-382-111_option4" style="display:block;">
+<span id="span_checkbox4" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;label for="lang"&gt;This field is required*&lt;/label&gt;</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox2" tabindex="1" cid="c1944" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382111" value="$$abMTA_98-382-111_option2" style="display:block;">
+<span id="span_checkbox2" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;input type="text" id="lang" name="language" required
+        pattern="[Jj]avaScript|[Pp]ython|[Ss]malltalk|[Jj]ava"&gt;</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox1" tabindex="1" cid="c1943" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382111" value="$$abMTA_98-382-111_option1" style="display:block;">
+<span id="span_checkbox1" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;label for="lang"&gt;Select your favorite language
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;abbr title="This field is required"&gt;*&lt;/abbr&gt;
+   &lt;/label&gt;</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">To match the requirements in the question, the complete solution should be as follows:
+
+<br><br>input:focus:invalid {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   color: red;
+<br>}
+
+<br><br>&lt;div&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;label for="lang"&gt;Select your favorite language
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;abbr title="This field is required"&gt;*&lt;/abbr&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;/label&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;input type="text" id="lang" name="language" required
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        pattern="[Jj]avaScript|[Pp]ython|[Ss]malltalk|[Jj]ava"&gt;
+<br>&lt;/div&gt;
+
+<br><br>The input solution shown here meets the requirements. When the input has a focus and the user is entering invalid data, the color of the text will turn red. The input solution that indicates using the id (input#language:focus:invalid) is incorrect because the id of the field is 'lang', not 'language'.
+
+<br><br>The label surrounds an &lt;abbr&gt; tag that contains the star. The title of the &lt;abbr&gt; tag represents the text that should popup when the user hovers over the star.
+
+<br><br>Since the supported languages are JavaScript, Python, Smalltalk, and Java, you can use the pattern attribute to include these values specifically. In addition, you can include the first letter of the language in upper and lower case inside a square bracket, and that will make any of the two characters acceptable:
+
+<br><br>&lt;input type="text" id="lang" name="language" required
+<br>        pattern="[Jj]avaScript|[Pp]ython|[Ss]malltalk|[Jj]ava"&gt;
+
+<br><br>Using pattern="[A-Z][A-Za-z' -]+" is incorrect because it starts with an uppercase letter followed by any other letter, apostrophe, a space, or a dash, but there is no limit on the supported languages.
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Complete and debug code to perform input validation<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Form data validation</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

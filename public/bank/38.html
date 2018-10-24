@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Declare, and use arrays<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 495px;"><p id="stemText" class="stemFont">You have the following
+        HTML page:
+        <code>
+            <br><br>&lt;!DOCTYPE html&gt;
+            <br>&lt;html&gt;
+            <br>&lt;head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Intro to JavaScript&lt;/title&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8" /&gt;
+            <br>&lt;/head&gt;
+            <br>&lt;body&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var letters = ["A", "B", "D", "F", "N",
+            "R", "T", "C", "O", "P"];
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var x = letters.shift();
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var u = letters.splice(1, 3);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; letters.push("E");
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; console.log(letters);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
+            <br>&lt;/body&gt;
+            <br>&lt;/html&gt;
+        </code>
+        <br><br>What shows in the console when the page is loaded in the browser?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 2%; width: 920px; height: auto;"><input id="radio0" cid="c735"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382038"
+                                                                                        value="$$abMTA_98-382-038_option0"
+                                                                                        style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ "B", "R", "T", "C", "O", "P", "E" ]</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c736"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382038"
+                                                                                         value="$$abMTA_98-382-038_option1"
+                                                                                         style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ "A", "N", "R", "T", "C", "O", "P", "E" ]</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c738"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382038"
+                                                                                         value="$$abMTA_98-382-038_option3"
+                                                                                         style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ "B", "N", "R", "T", "C", "O", "P", "E" ]</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c737"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382038"
+                                                                                         value="$$abMTA_98-382-038_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ "A", "N", "R", "T", "C", "O", "E" ]</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The following will show in the console:
+
+                <br><br>Array [ "B", "R", "T", "C", "O", "P", "E" ]
+
+                <br><br>The letters array starts with the following content:
+
+                <br><br>["A", "B", "D", "F", "N", "R", "T", "C", "O", "P"]
+
+                <br><br>Then, the shift function removes the first element ("A"):
+
+                <br><br>["B", "D", "F", "N", "R", "T", "C", "O", "P"]
+
+                <br><br>The splice function removes n elements from a specific position. For example splice (2,4)
+                removes 4 elements starting at index 2. In this scenario, splice(1,3) removes three elements starting at
+                index 1:
+
+                <br><br>["B", "R", "T", "C", "O", "P"]
+
+                <br><br>Finally, the push function adds an element to the end of the array:
+
+                <br><br>["B", "R", "T", "C", "O", "P", "E"]
+
+                <br><br>The console.log statement writes the element in the console in a comma-separated list:
+
+                <br><br>Array [ "B", "R", "T", "C", "O", "P", "E" ]
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with Variables, Data Types, and Functions</p>
+            <p>SubObjective:</p>
+            <p>Declare, and use arrays<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Array</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

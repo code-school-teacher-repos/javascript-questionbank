@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Identify and construct the Document Object Model (DOM) tree<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 231px;"><p id="stemText" class="stemFont">You are creating a page in an application that contains a grid of records.
+
+<br><br>When a user clicks on one record, the background color changes to yellow. If the user exits the application completely and comes back to it later in the day, you want the application to remember the record and highlight it.
+
+<br><br>You need to add the code to accomplish this task.
+
+<br><br>Which feature should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio1" cid="c1387" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382076" value="$$abMTA_98-382-076_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">Session storage</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1386" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382076" value="$$abMTA_98-382-076_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">Local storage</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1388" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382076" value="$$abMTA_98-382-076_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Global variables</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1389" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382076" value="$$abMTA_98-382-076_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">Location object</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">You need to use local storage to accomplish this task. You can use local storage or session storage to save data as the user is browsing the application. However, with session storage, the data is maintained as long as the session is still active (the user did not close the window or the tab).
+
+<br><br>For this scenario, the user exits the application and comes back to it later in the day. Session storage will be wiped out, but not local storage. With local storage, the data has no expiration time. Here is an example how you might be able to use the local storage:
+
+<br><br>localStorage.setItem("rowSelected", "15");
+<br>....
+<br>var selection = locaStorage.getItem("rowSelected");
+
+<br><br>Global variables will not work in this case because they will also be wiped out as the user exits the application (closes the window).
+
+<br><br>The location object gets and sets the current URL for the window object. It is not applicable to the scenario of storing data.
+<br><br><p>Objective:</p><p>Interact with the Document Object Model</p><p>SubObjective:</p><p>Identify and construct the Document Object Model (DOM) tree<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Window</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Window.localStorage</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

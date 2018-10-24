@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with JavaScript Operators, Methods, and Keywords</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with JavaScript Operators, Methods, and Keywords
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Implement exception handling<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 927px;"><p id="stemText" class="stemFont">In the following HTML
+        page, a function stepThroughIt() is defined:
+        <code>
+            <br><br>&lt;!DOCTYPE html&gt;
+            <br>&lt;html&gt;
+            <br>&lt;head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Intro to JavaScript&lt;/title&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8" /&gt;
+            <br>&lt;/head&gt;
+            <br>&lt;body&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function stepThroughIt() {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            try {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            throw new Error('Division by zero');
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            catch (ex) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            console.error(ex.message);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            throw ex;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            finally {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            console.log('Inner finally');
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            return;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (ex) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            console.error(ex.message);
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; finally {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            console.log('Outer finally');
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stepThroughIt();
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
+            <br>&lt;/body&gt;
+            <br>&lt;/html&gt;
+        </code>
+        <br><br>What will get written to the log when the page is loaded in the browser?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c466"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382022"
+                                                                                        value="$$abMTA_98-382-022_option3"
+                                                                                        style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">Division by zero
+Outer finally</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c463"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382022"
+                                                                                         value="$$abMTA_98-382-022_option0"
+                                                                                         style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">Division by zero
+Inner finally
+Outer finally</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c464"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382022"
+                                                                                         value="$$abMTA_98-382-022_option1"
+                                                                                         style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">Division by zero
+Inner finally 
+Division by zero
+Outer finally</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c465"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382022"
+                                                                                         value="$$abMTA_98-382-022_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Division by zero
+Inner finally</span></div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The following will be written to the log:
+
+                <br><br>Division by zero
+                <br>Inner finally
+                <br>Outer finally
+
+                <br><br>The function stepThroughIt() is composed of nested try/catch blocks. The first try throws an
+                error immediately. This error is handled in the catch block. In this case, only the ex.message is
+                written to the console. Therefore, "Division by zero" is written to the console. In the case where only
+                ex is logged (console.log(ex)), the following will get displayed instead: "Error: Division by zero".
+
+                <br><br>After the error is logged, it is thrown again. The finally block needs to execute first, and
+                "Inner finally" is written to the console. However, what is unique in this scenario is that the finally
+                block has the return; statement. This return statement overwrites the previous throw. In other words,
+                the inner throw will not get executed, and therefore the outer catch will not run (another "Division by
+                zero" will not be written to the console). Since finally statements are always executed, the "Outer
+                finally" will be written to the console.
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with JavaScript Operators, Methods, and Keywords</p>
+            <p>SubObjective:</p>
+            <p>Implement exception handling<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>try...catch</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>throw</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

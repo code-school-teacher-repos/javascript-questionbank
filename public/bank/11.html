@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with JavaScript Operators, Methods, and Keywords</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with JavaScript Operators, Methods, and Keywords
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Apply JavaScript best practices<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 567px;"><p id="stemText" class="stemFont">The body of an HTML
+        page contains the following code:
+        <code>
+            <br><br>&lt;div id="result" class="format-output"&gt;&lt;/div&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const student_count = 24;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("result").innerHTML
+            = getGradesList();
+
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function getGradesList() {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; student_count
+            = 30;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; let
+            gradesList = '&nbsp;';
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (var i =
+            0; i &lt; student_count; i++) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            gradesList += getRandomGrade() + ' ';
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+            gradesList;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function getRandomGrade() {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; const grades
+            = "ABCDF";
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+            grades.charAt(Math.floor(Math.random() * grades.length));
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
+        </code>
+        <br><br>What will be displayed on the screen when this page is previewed in the browser?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 2%; width: 920px; height: auto;"><input id="radio0" cid="c298"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382011"
+                                                                                        value="$$abMTA_98-382-011_option0"
+                                                                                        style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">An error message</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c300"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382011"
+                                                                                         value="$$abMTA_98-382-011_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">A list of random letters between A and F</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c301"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382011"
+                                                                                         value="$$abMTA_98-382-011_option3"
+                                                                                         style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">A list of empty spaces</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c299"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382011"
+                                                                                         value="$$abMTA_98-382-011_option1"
+                                                                                         style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">A list of random letters</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">An error message will be displayed on the screen when this page is previewed in
+                the browser. Variables in JavaScript are declared using var, let, or const. With the const keyword,
+                variables are read-only, meaning they cannot be changed.
+
+                <br><br>In the code above, a variable that holds the student count is declared (const student_count =
+                24;). However, inside the getGradesList() function, there is an attempt to change this constant to 30.
+                This will generate the following error:
+
+                <br><br>TypeError: invalid assignment to const `student_count'
+
+                <br><br>If the line student_count = 30; is removed from the function getGradesList(),a list of random
+                grades of A, B, C, D, and F is generated. Since the function getRandomGrade() is using Math.random(), a
+                different set of grades would be generated every time the screen is refreshed.
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with JavaScript Operators, Methods, and Keywords</p>
+            <p>SubObjective:</p>
+            <p>Apply JavaScript best practices<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Grammar and types</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

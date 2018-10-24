@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Declare, and use arrays<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 591px;"><p id="stemText" class="stemFont">You have the following
+        HTML page:
+        <code>
+            <br><br>&lt;!DOCTYPE html&gt;
+            <br>&lt;html&gt;
+            <br>&lt;head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Intro to JavaScript&lt;/title&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8" /&gt;
+            <br>&lt;/head&gt;
+            <br>&lt;body&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var elements = ["green", "red", "yellow",
+            "purple", "orange", "white"];
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var e1 = elements[elements.length - 1];
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var e2 = elements.unshift(e1);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var e3 = elements.push("black");
+
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elements.forEach(function (item, i,
+            arr) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+            (item.length === 5)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            console.log(item, i);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; });
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
+            <br>&lt;/body&gt;
+            <br>&lt;/html&gt;
+        </code>
+        <br><br>What will be displayed in the console when the page is loaded in the browser?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio1" cid="c706"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382036"
+                                                                                        value="$$abMTA_98-382-036_option1"
+                                                                                        style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">green 0
+white 2
+white 7
+black 4</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c705"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382036"
+                                                                                         value="$$abMTA_98-382-036_option0"
+                                                                                         style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">white 0
+green 1
+white 6
+black 7</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c708"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382036"
+                                                                                         value="$$abMTA_98-382-036_option3"
+                                                                                         style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">white 3
+green 4
+white 6
+black 5
+black 2</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c707"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382036"
+                                                                                         value="$$abMTA_98-382-036_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">black 2
+green 3
+green 1
+black 7</span></div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The output will be as follows:
+
+                <br><br>white 0
+                <br>green 1
+                <br>white 6
+                <br>black 7
+
+                <br><br>The elements array is declared with 6 color strings. elements.length represents the length of
+                the array, which is 6. e1 is the element at location 5, which is the last element in the array since
+                array indexing starts at 0.
+
+                <br><br>unshift(e1) means adding e1 to the beginning of the array. Then, "black" is pushed to the end of
+                the array. At this point, the array contains the following:
+
+                <br><br>["white", "green", "red", "yellow", "purple", "orange", "white", "black"]
+
+                <br><br>The last set of code loops over the elements of the array using forEach, and checks if the
+                element's length is 5. If it is the case, the element and its index are printed in the console.
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with Variables, Data Types, and Functions</p>
+            <p>SubObjective:</p>
+            <p>Declare, and use arrays<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Array</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Identify and construct the Document Object Model (DOM) tree<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 135px;"><p id="stemText" class="stemFont">You have the code shown
+        in the answer area.
+
+        <br><br>You need to complete the code.
+
+        <br><br>Which lines of code should you use? To answer, select the appropriate options from the drop-down menus.
+    </p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 720px !important;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; height: 720px; position: absolute;"><img
+                src="./81_files/abMTA_98-382-081.jpg"
+                alt="Question includes an image that is part of the question and must be understood in order answer the question.">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div cid="c1463" class="widgets undefined"
+                 style="left: 54px; top: 365px; width: 325px; height: 21px; z-index: 1;"><span
+                    style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+                <div id="select0DIV">
+                    <select id="select0" tabindex="-1" class="selects correctAnswerBackground"
+                            style="display: table-cell; width: 100%; height: 100%;">
+                        <option selected="selected" value=""></option>
+                        <option value="intervalId = setInterval(changeElement, 1000);">intervalId =
+                            setInterval(changeElement, 1000);
+                        </option>
+                        <option value="setInterval(changeElement, 1000);">setInterval(changeElement, 1000);</option>
+                        <option value="setTimeout(changeElement, 1000);">setTimeout(changeElement, 1000);</option>
+                    </select>
+                </div>
+            </div>
+            <div cid="c1464" class="widgets undefined"
+                 style="left: 53px; top: 616px; width: 330px; height: 21px; z-index: 1;"><span
+                    style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+                <div id="select1DIV">
+                    <select id="select1" tabindex="-1" class="selects correctAnswerBackground"
+                            style="display: table-cell; width: 100%; height: 100%;">
+                        <option selected="selected" value=""></option>
+                        <option value="clearInterval();">clearInterval();</option>
+                        <option value="clearInterval(intervalId);">clearInterval(intervalId);</option>
+                        <option value="clearTimeout();">clearTimeout();</option>
+                    </select>
+                </div>
+            </div>
+            <div id="overlayAnswer"></div>
+        </div>
+    </div>
+
+</div>
+
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The missing lines of code needed for this scenario are:
+
+                <br><br>First missing line: intervalId = setInterval(changeElement, 1000);
+                <br>Second missing line: clearInterval(intervalId);
+
+                <br><br>The setInterval() function is used to repeatedly call a function with a fixed time delay. The
+                setTimeout() function is used to call a function after a specific timer expires.
+
+                <br><br>In this scenario, as the page loads, the function changeElement() is called:
+
+                <br><br>body onload="changeElement();"
+
+                <br><br>This function reads the current date, gets the div with id result, changes the background color,
+                and sets the content to the current seconds.
+
+                <br><br>The first missing line of code is the setInterval() function that calls changeElement() every
+                second (1000 milliseconds). The button's onclick event calls the stopIt() function to stop this repeated
+                interval of function calls. However, in order to accomplish this, clearInterval() needs the id that was
+                returned when the interval was first set. This is why the intervalId is stored in the setInterval() call
+                and passed as a parameter to the clearInterval() function.
+
+                <br><br>The other options ignore the intervalId, which makes the code fail to clear the interval.
+                <br><br>
+            <p>Objective:</p>
+            <p>Interact with the Document Object Model</p>
+            <p>SubObjective:</p>
+            <p>Identify and construct the Document Object Model (DOM) tree<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>WindowOrWorkerGlobalScope.setTimeout()</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>WindowOrWorkerGlobalScope.setInterval()</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

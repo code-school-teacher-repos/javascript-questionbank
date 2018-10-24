@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug a function that accepts parameters and returns a value<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 1071px;"><p id="stemText" class="stemFont">You load the following page in the browser:
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;script&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        let beeCount = 400;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        let course = {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            name: 'intro to programming',
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            id: 1012,
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            description: 'this course introduces students to programming',
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            students: [
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                student1 = {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    name: 'James',
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    credits: 5
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                },
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                student2 = {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    name: 'Bryan',
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                    credits: 3
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                }
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            ]
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        };
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        var func1 = function (a) {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            a = 456;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        var func2 = function (item) {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            if (!item) return;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            item.name = 'JavaScript programming';
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            item.id = 1015;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        function callThem() {
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            console.log(beeCount);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            func1(beeCount);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            console.log(beeCount);
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            console.log(`Name: ${course.name}, id: ${course.id}`);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            func2(course);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            console.log(`Name: ${course.name}, id: ${course.id}`);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        }
+
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        callThem();
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/script&gt;
+
+<br><br>What will be displayed in the console?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 2%; width: 920px; height: auto;"><input id="radio0" cid="c1092" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382059" value="$$abMTA_98-382-059_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">400
+400
+Name: intro to programming, id: 1012
+Name: JavaScript programming, id: 1015</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1093" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382059" value="$$abMTA_98-382-059_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">400
+456
+Name: intro to programming, id: 1012
+Name: JavaScript programming, id: 1015</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1095" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382059" value="$$abMTA_98-382-059_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">456
+456
+Name: intro to programming, id: 1012
+Name: JavaScript programming, id: 1015</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1094" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382059" value="$$abMTA_98-382-059_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">400
+400
+Name: intro to programming, id: 1012
+Name: intro to programming, id: 1012</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The following will be displayed in the console:
+
+<br><br>400
+<br>400
+<br>Name: intro to programming, id: 1012
+<br>Name: JavaScript programming, id: 1015
+
+<br><br>Notice that beeCount is a number while course is an object. Basic types like a number are passed to a function by value. That means that only a copy of the variable is passed, not the variable itself. Changes are made to the copy, and the original variable is not impacted. In the following segment:
+
+<br><br>console.log(beeCount);
+<br>func1(beeCount);
+<br>console.log(beeCount);
+
+<br><br>The original value of beeCount (400) is printed to the console. Then a copy is passed to the function. The copy is changed inside the function to 456. But, by the time the function terminates, that copy is out of scope and beeCount retains its original value of 400.
+
+<br><br>On the other hand, course is passed to func2(). Objects are passed by reference. That means that a memory reference to the object course is passed in, and any changes made to the object are permanent. 
+
+<br><br>console.log(`Name: ${course.name}, id: ${course.id}`);
+<br>func2(course);
+<br>console.log(`Name: ${course.name}, id: ${course.id}`);
+
+<br><br>The original name and id are printed. Then, the same course object is passed by reference to the function func2(). The function changes the actual values permanently, and now the new name and id are printed.
+<br><br><p>Objective:</p><p>Program with Variables, Data Types, and Functions</p><p>SubObjective:</p><p>Complete and debug a function that accepts parameters and returns a value<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Functions</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Function</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

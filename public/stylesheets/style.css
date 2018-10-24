@@ -1,0 +1,37 @@
+.spanSingleChoice {
+  padding-left: 72px;
+  width: 97%;
+  min-height: 50px;
+  overflow: inherit;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  white-space: pre-line;
+}
+
+.jsQuestion {
+  padding: 5px;
+  background-color: antiquewhite;
+}
+
+.jsAnswers {
+  padding: 5px;
+  background-color: aquamarine;
+}
+
+.jsExplanation {
+  padding: 5px;
+  background-color: khaki;
+}
+
+.jsConcepts {
+  padding: 25px;
+  font-size: large;
+  background-color: aliceblue;
+  font-weight: bold;
+}
+
+.jsSubConcepts {
+  padding: 25px;
+  font-size: smaller;
+  background-color: azure;
+}

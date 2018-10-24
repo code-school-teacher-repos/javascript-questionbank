@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 39px;"><p id="stemText" class="stemFont">Which code snippet prints "Result: 31" in the console?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c1005" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382053" value="$$abMTA_98-382-053_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">function getNumbers(x) {
+     var result = '&nbsp;';
+     for (var i = 0; i &lt; x; i++) {
+         result += Math.pow(2, i) + '&nbsp;&nbsp;';
+     }
+     return result;
+}
+console.log(`Result: ${getNumbers(5)}`);</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1004" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382053" value="$$abMTA_98-382-053_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">function getRandom(a, b) {
+     return Math.floor(Math.random() * (b - a + 1)) + a;
+}
+console.log(`Result: ${getRandom(5,20)}`);</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1002" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382053" value="$$abMTA_98-382-053_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">console.log(`Result: ${Math.round(Math.ceil(Math.pow(Math.PI,2)) * Math.PI)}`);</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1003" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382053" value="$$abMTA_98-382-053_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">console.log(`Result: ${Math.round(Math.ceil(Math.E) * Math.PI)}`);</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The call that prints "Result: 31" in the console  is:
+
+<br><br>console.log('Result: ${Math.round(Math.ceil(Math.pow(Math.PI,2)) * Math.PI)}');
+
+<br><br>The value of Math.ceil(Math.pow(Math.PI,2)) is 10 since PI (3.14159) is raised to the power 2 (squared), and the ceiling(the smallest integer that is greater than or equal to the number) returns 10.  Math.ceil(Math.pow(Math.PI,2)) * Math.PI is 31.416. Rounding this value to the nearest integer results in 31.. The console.log() prints "Result: 31".
+
+<br><br> The following call results in 9. The order of operations states that E (2.718) has the ceiling calculated first, then multiplied by PI (3.14159), and the outcome is rounded.
+
+<br><br>Math.round(Math.ceil(Math.E) * Math.PI)
+
+<br><br>You should not use the function getRandom()because it generates a random number that falls between the parameters provided, inclusive:
+
+<br><br>function getRandom(a, b) {
+<br>     return Math.floor(Math.random() * (b - a + 1)) + a;
+<br>}
+
+<br><br>First, Math.random() generates a random number between 0 and 1. Multiplying this number by (b - a + 1)) + a results in a value between a and b. Please note that since this a random number, running this code results in a different number every time. That number, however, falls between 5 and 20 inclusive. Therefore, it will not produce 31.
+
+<br><br>You should not use the function getNumbers(5) because it loops five times and accumulates the values of "2 to the power of the loop index" in result. The outcome is 1 2 4 8 16.
+
+<br><br>function getNumbers(x) {
+<br>     var result = '';
+<br>     for (var i = 0; i &lt; x; i++) {
+<br>         result += Math.pow(2, i) + ' ';
+<br>     }
+<br>     return result;
+<br>}<br><br><p>Objective:</p><p>Program with Variables, Data Types, and Functions</p><p>SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Math</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

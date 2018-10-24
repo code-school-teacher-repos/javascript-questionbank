@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 399px;"><p id="stemText" class="stemFont">You are debugging the following code:
+
+<br><br>var a = Math.SQRT2;
+<br>var b = Math.E;
+<br>var c = Math.PI;
+<br>var d = Math.min(2.5, -3.2, 4, -5);
+<br>var e = Math.max(7, -2, 3.5, 1);
+<br>var values = [Math.round(a), Math.floor(b), Math.ceil(c), d, e];
+
+<br><br>getContent();
+
+<br><br>function getContent() {
+<br>    console.log(values);
+<br>}
+
+<br><br>What content will be displayed for the values array in the console?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 2%; width: 920px; height: auto;"><input id="radio0" cid="c912" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382049" value="$$abMTA_98-382-049_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ 1, 2, 4, -5, 7 ]</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c915" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382049" value="$$abMTA_98-382-049_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ 2, 2.8, 3.2, 7, -3.2 ]</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c913" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382049" value="$$abMTA_98-382-049_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ 1, 3, 3, -5, 7 ]</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c914" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382049" value="$$abMTA_98-382-049_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Array [ 2, 3, 4, 7, -5 ]</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The content of the array will be displayed as Array [ 1, 2, 4, -5, 7 ] in the console.
+
+<br><br>Going through the variables one by one will result in the following:
+
+<br><br>a is Math.SQRT2, which is 1.4142135623730951. Since the value after the decimal is 4 (below 5), Math.round(a) produces 1.
+
+<br><br>b is Math.E, which is a constant of value 2.718. The floor (the largest integer less than or equal to the number) of b is 2.
+
+<br><br>c is Math.PI, which is another constant representing 3.14159. The ceiling (the smallest integer greater than or equal to the number) of this number is 4.
+
+<br><br>In the set of values 2.5, -3.2, 4, and -5, the minimum is -5.
+
+<br><br>For the set 7, -2, 3.5, and 1, the maximum is 7.
+
+<br><br>The console will not display Array [ 1, 3, 3, -5, 7 ]. The first 3 is the ceiling of Math.E, not the floor. And the second 3 is the round of Math.PI, not the ceiling.
+
+<br><br>The console will not display Array [ 2, 3, 4, 7, -5 ]. First, rounding Math.SQRT2 is 1, not 2. In addition, the last two values (7 and -5) are reversed.
+
+<br><br>The console will not display Array [ 2, 2.8, 3.2, 7, -3.2 ]. The first value should be 1 instead of 2 because rounding Math.SQRT2 is 1. Also the floor of Math.E is 2 rather than 2.8. The ceiling of Math.PI is 4, not 3.2. The minimum and maximum are -5 and 7 correspondingly.
+<br><br><p>Objective:</p><p>Program with Variables, Data Types, and Functions</p><p>SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Math</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

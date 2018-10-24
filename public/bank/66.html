@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Implement and Analyze Decisions and Loops</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Implement and Analyze Decisions and Loops
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug decision statements<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 39px;"><p id="stemText" class="stemFont">Which two code blocks would cause an alert to show on the screen?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="checkbox6" tabindex="1" cid="c1236" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382066" value="$$abMTA_98-382-066_option6" style="display:block;">
+<span id="span_checkbox6" style="position: relative !important;display: block;" class="spanSingleChoice">if (undefined)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('undefined satisfied!');</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox3" tabindex="1" cid="c1233" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382066" value="$$abMTA_98-382-066_option3" style="display:block;">
+<span id="span_checkbox3" style="position: relative !important;display: block;" class="spanSingleChoice">if (Infinity)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('Infinity satisfied!');</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox4" tabindex="1" cid="c1234" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382066" value="$$abMTA_98-382-066_option4" style="display:block;">
+<span id="span_checkbox4" style="position: relative !important;display: block;" class="spanSingleChoice">if (NaN)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   alert('NaN satisfied!');</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="checkbox0" tabindex="1" cid="c1230" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382066" value="$$abMTA_98-382-066_option0" style="display:block;">
+<span id="span_checkbox0" style="position: relative !important;display: block;" class="spanSingleChoice">if (+0)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('+0 satisfied!');</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox2" tabindex="1" cid="c1232" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382066" value="$$abMTA_98-382-066_option2" style="display:block;">
+<span id="span_checkbox2" style="position: relative !important;display: block;" class="spanSingleChoice">if (isNaN("32"))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('isNaN satisfied!');</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox1" tabindex="1" cid="c1231" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382066" value="$$abMTA_98-382-066_option1" style="display:block;">
+<span id="span_checkbox1" style="position: relative !important;display: block;" class="spanSingleChoice">if (new String("test"))
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('new String satisfied!');</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox5" tabindex="1" cid="c1235" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382066" value="$$abMTA_98-382-066_option5" style="display:block;">
+<span id="span_checkbox5" style="position: relative !important;display: block;" class="spanSingleChoice">if (null)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('null satisfied!');</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The code blocks that would cause an alert to show in the screen are:
+
+<br><br>if (new String("test"))
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('new String satisfied!');
+
+<br><br>if (Infinity)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    alert('Infinity satisfied!');
+
+<br><br>For the body of an if statement to execute, the condition between the parentheses must evaluate to true.
+
+<br><br>A string object containing text (in this case "test") evaluates to true, and the alert will display. On the other hand, if the string was empty, that would evaluate to false.
+
+<br><br>Infinity is a large number, and since all numbers (except 0) are considered true in a condition, the alert associated with that condition will also display.
+
+<br><br>There are many reserved words that evaluate to false. This includes: undefined, null and NaN. All zeros (-0, 0, and +0) are considered false while evaluated in a Boolean condition.
+
+<br><br>Although "32" is included within quotes, it is converted to a number, and the expression isNaN("32") is false. The associated alert will not display for this condition.
+<br><br><p>Objective:</p><p>Implement and Analyze Decisions and Loops</p><p>SubObjective:</p><p>Complete and debug decision statements<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>if...else</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Making decisions in your code - conditionals</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

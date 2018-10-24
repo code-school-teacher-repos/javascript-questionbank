@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with JavaScript Operators, Methods, and Keywords</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with JavaScript Operators, Methods, and Keywords
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Evaluate the use of inline and external scripts<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 1095px;"><p id="stemText" class="stemFont">You have the following
+        HTML page and its referenced Common6.js file:
+        <code>
+            <br><br>&lt;!DOCTYPE html&gt;
+            <br>&lt;html&gt;
+            <br>&lt;head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Intro to JavaScript&lt;/title&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8" /&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script src="Scripts/Common6.js"&gt;&lt;/script&gt;
+            <br>&lt;/head&gt;
+            <br>&lt;body&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div id="result"&gt;&lt;/div&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function doAction(data, size) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!data ||
+            size
+            &lt;= 0)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            return -1;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var newData =
+            data.split(' ');
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var result;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (var i =
+            0; i
+            &lt; size; i++) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            result += newData[i];
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+            result;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
+
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var info = "1 2 3 4 5 6 7"
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.getElementById("result").innerHTML
+            =
+            doAction(info, 5);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
+            <br>&lt;/body&gt;
+            <br>&lt;/html&gt;
+        </code>
+        <br><h3>Common.js</h3>
+        <code>
+            <br><br>function doAction(data) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!data)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return -1;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var newData = data.split(' ');
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var result = 0;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (var i = 0; i &lt; 5; i++) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; result += newData[i];
+            <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return result;
+            <br>}
+        </code>
+        <br><br>What will be displayed in the browser when previewing the page?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c406"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382018"
+                                                                                        value="$$abMTA_98-382-018_option3"
+                                                                                        style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">012345</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c405"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382018"
+                                                                                         value="$$abMTA_98-382-018_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;"
+                      class="spanSingleChoice">15</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c404"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382018"
+                                                                                         value="$$abMTA_98-382-018_option1"
+                                                                                         style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">12345</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c403"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382018"
+                                                                                         value="$$abMTA_98-382-018_option0"
+                                                                                         style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">undefined12345</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The browser will display the following: undefined12345. The HTML page references
+                Common6.js file in the header. This file already contains a function named doAction(). This function
+                takes a collection of elements as a parameter (data). It splits the collection using a space and stores
+                the resulting collection in another variable (newData). Then, it loops 5 times, reading each element
+                from newData and accumulating them in a result.
+
+                <br><br>On the other hand, the body of the HTML page contains another function named doAction() that
+                takes two parameters, the data and the size. It splits the data using a space, storing the outcome in
+                newData, then looping over the collection "size" times and accumulating the result in "result". The
+                second script on the page creates a string containing "1 2 3 4 5 6 7" and passing that to doAction().
+                The question is: which doAction() will be called? The one with two parameters, or the one with one
+                parameter?
+
+                <br><br>It turns out that functions in JavaScript are references. So when the first doAction() was
+                encountered when loading the Common6.js file, the reference was pointing to that function. But then when
+                the script in the body was loaded, another doAction() was encountered. Since it is the same name, now
+                doAction() references the new set of code in the body of the HTML page. Therefore, the number of
+                parameters in the function does not make a difference (like it does in other languages such as Java or
+                C#). Since the number collection is passed as a string to the function, looping over the collection and
+                accumulating the elements is a string accumulation or concatenation, NOT a number addition. Therefore
+                the result is not 15. Looping over and accumulating "1 2 3 4 5 6 7" results in "1234567". However, since
+                the function doAction() was called with 5 as a second parameter, the result is "12345". Furthermore,
+                notice that the variable result was declared as var result; which is not initialized. That makes the
+                initial value "undefined". That makes the final result in the browser window "undefined12345".
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with JavaScript Operators, Methods, and Keywords</p>
+            <p>SubObjective:</p>
+            <p>Evaluate the use of inline and external scripts<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>script</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/script"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>String</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Array</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

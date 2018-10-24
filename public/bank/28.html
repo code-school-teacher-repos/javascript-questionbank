@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with JavaScript Operators, Methods, and Keywords</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with JavaScript Operators, Methods, and Keywords
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that interacts with the Browser Object Model (BOM)<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 375px;"><p id="stemText" class="stemFont">The following script
+        displays information about the screen:
+        <code>
+            <br><br> &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var result =
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `screen.width = ${screen.width}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen.height = ${screen.height}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen.availWidth = ${screen.availWidth}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen.availHeight = ${screen.availHeight}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen.colorDepth = ${screen.colorDepth}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; screen.pixelDepth = ${screen.pixelDepth}`;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(result);
+            <br> &lt;/script&gt;
+        </code>
+        <br><br>For each of the following statements about these properties, select Yes if the statement is true.
+        Otherwise, select No.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img
+                src="./28_files/abMTA_98-382-028.jpg"
+                alt="Question includes an image that is part of the question and must be understood in order answer the question.">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div class="widgets null" style="left: 433px; top: 79px; width: 20px; height: 17px;"><input
+                    id="abMTA983820280" tabindex="-1" cid="c567" class="widgets pointer" type="checkbox"
+                    name="abMTA983820280" value="" style="display:block;">
+                <span id="span_abMTA983820280" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div class="widgets null" style="left: 485px; top: 79px; width: 19px; height: 17px;"><input
+                    id="abMTA983820281" tabindex="-1" cid="c568" class="widgets pointer" type="checkbox"
+                    name="abMTA983820281" value="" style="display:block;">
+                <span id="span_abMTA983820281" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div class="widgets null" style="left: 433px; top: 131px; width: 18px; height: 17px;"><input
+                    id="abMTA983820282" tabindex="-1" cid="c569" class="widgets pointer" type="checkbox"
+                    name="abMTA983820282" value="" style="display:block;">
+                <span id="span_abMTA983820282" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div class="widgets null" style="left: 485px; top: 131px; width: 17px; height: 16px;"><input
+                    id="abMTA983820283" tabindex="-1" cid="c570" class="widgets pointer" type="checkbox"
+                    name="abMTA983820283" value="" style="display:block;">
+                <span id="span_abMTA983820283" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div class="widgets null" style="left: 433px; top: 182px; width: 18px; height: 19px;"><input
+                    id="abMTA983820284" tabindex="-1" cid="c571" class="widgets pointer" type="checkbox"
+                    name="abMTA983820284" value="" style="display:block;">
+                <span id="span_abMTA983820284" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div class="widgets null" style="left: 485px; top: 183px; width: 17px; height: 17px;"><input
+                    id="abMTA983820285" tabindex="-1" cid="c572" class="widgets pointer" type="checkbox"
+                    name="abMTA983820285" value="" style="display:block;">
+                <span id="span_abMTA983820285" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div class="widgets null" style="left: 433px; top: 234px; width: 18px; height: 17px;"><input
+                    id="abMTA983820286" tabindex="-1" cid="c573" class="widgets pointer" type="checkbox"
+                    name="abMTA983820286" value="" style="display:block;">
+                <span id="span_abMTA983820286" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div class="widgets null" style="left: 485px; top: 234px; width: 17px; height: 16px;"><input
+                    id="abMTA983820287" tabindex="-1" cid="c574" class="widgets pointer" type="checkbox"
+                    name="abMTA983820287" value="" style="display:block;">
+                <span id="span_abMTA983820287" style="position: relative !important;display: block;" class=""></span>
+            </div>
+            <div id="overlayAnswer"></div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The only option that is correct is:
+
+                <br><br>screen.availHeight &lt; screen.height
+
+                <br><br>The window.screen object contains information about the screen. It has the following properties:
+
+                <br><br>screen.width
+                <br>screen.height
+                <br>screen.availWidth
+                <br>screen.availHeight
+                <br>screen.colorDepth
+                <br>screen.pixelDepth
+
+                <br><br>The available width and available height are smaller than their corresponding width and height.
+                The reason is that the actual width and height already account for the interface features displayed by
+                the operating system. The taskbar is a good example. The available height will be the actual height
+                minus the height occupied by the taskbar. This explains why the screen's available height (availHeight)
+                is less than its height.
+
+                <br><br>colorDepth returns the color depth of the screen, and the pixel depth gets the bit depth of the
+                screen. For compatibility reasons, these options return the value 24 by specification. Because these
+                values are the same, one is neither greater than nor less than the other.
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with JavaScript Operators, Methods, and Keywords</p>
+            <p>SubObjective:</p>
+            <p>Complete and debug code that interacts with the Browser Object Model (BOM)<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Screen.width</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Screen/width" tabindex="190">Click
+                here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Screen</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Screen" tabindex="190">Click
+                here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

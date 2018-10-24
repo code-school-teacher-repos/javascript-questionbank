@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="3wcircus">
+    <serverData>
+      <paths name="3wcircus">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/questionbank" local="$PROJECT_DIR$" web="/questionbank" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

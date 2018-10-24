@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with JavaScript Operators, Methods, and Keywords</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with JavaScript Operators, Methods, and Keywords
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that interacts with the Browser Object Model (BOM)<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 855px;"><p id="stemText" class="stemFont">An HTML page contains
+        the following:
+        <code>
+            <br><br>&lt;!DOCTYPE html&gt;
+            <br>&lt;html&gt;
+            <br>&lt;head&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Intro to JavaScript&lt;/title&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8" /&gt;
+            <br>&lt;/head&gt;
+            <br>&lt;body&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; do {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var input =
+            prompt("Enter a value");
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var
+            acceptable = confirm("Continue?");
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var theType =
+            determineType(input);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            console.log("The type is: " + theType);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } while (acceptable)
+
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function determineType(input) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!input)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            return 'undefined';
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch
+            (input.constructor) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            case String: return "string with value '&nbsp;" + input + "&nbsp;'&nbsp;";
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            case Number: return "number with value " + input;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            case Date: return "date with value " + input;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            case RegExp: return "regular expression with value " + input;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
+            <br>&lt;/body&gt;
+            <br>&lt;/html&gt;
+        </code>
+        <br><br>You load the page in the browser, and you enter these values before canceling out of the confirm dialog:
+        test, 5, 8/11/2017, and /^abc$/.
+
+        <br><br>What will be displayed in the console window?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c541"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382027"
+                                                                                        value="$$abMTA_98-382-027_option3"
+                                                                                        style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">The type is: undefined
+The type is: undefined
+The type is: undefined
+The type is: undefined</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c540"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382027"
+                                                                                         value="$$abMTA_98-382-027_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">The type is: string with value 'test'
+The type is: number with value 5  
+The type is: date with value 8/11/2017  
+The type is: string with value '/^abc$/'</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c539"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382027"
+                                                                                         value="$$abMTA_98-382-027_option1"
+                                                                                         style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">The type is: string with value 'test'
+The type is: number with value 5  
+The type is: date with value 8/11/2017  
+The type is: regex with value /^abc$/</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c538"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382027"
+                                                                                         value="$$abMTA_98-382-027_option0"
+                                                                                         style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">The type is: string with value 'test'
+The type is: string with value '5'  
+The type is: string with value '8/11/2017'  
+The type is: string with value '/^abc$/'</span></div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The console window displays the following:
+
+                <br><br>The type is: string with value 'test'
+                <br>The type is: string with value '5'
+                <br>The type is: string with value '8/11/2017'
+                <br>The type is: string with value '/^abc$/'
+
+                <br><br>The script starts with a do-while loop that keeps iterating as long as "acceptable" is true. The
+                loop prompts the user for a value. The result is stored in input. Then the confirm dialog asks the user
+                whether to continue. Based on the user's selection of "ok" or "cancel", the value stored in "acceptable"
+                will be true or false respectively.
+
+                <br><br>The entered value is passed to a function named determineType() that checks the type of the
+                input using the constructor. In object-oriented terminology, a constructor is the initializer or the
+                function that constructs that specific type. The objects that you are comparing against here are:
+                String, Number, Date and RegExp.
+
+                <br><br>The switch statement (which is like an if statement) looks at the value of the constructor and
+                finds a matching case. Every type has an associated statement being returned.
+
+                <br><br>Based on the requirement, the user enters test, 5, 8/11/2017, and /^abc$/ before canceling the
+                dialog. These values are a string, a number, a date, and a regular expression. However, it is important
+                to note that the value returned by the prompt is always a string regardless of the structure of what has
+                been entered. Therefore, if the user enters '1/1/2018', this is considered a string, not a date. With
+                that in mind, the call to the determineType() function always matches the String case.
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with JavaScript Operators, Methods, and Keywords</p>
+            <p>SubObjective:</p>
+            <p>Complete and debug code that interacts with the Browser Object Model (BOM)<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Window.prompt()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt" tabindex="190">Click
+                here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Window.confirm()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm" tabindex="190">Click
+                here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Window.alert()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/alert" tabindex="190">Click
+                here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

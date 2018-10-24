@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with JavaScript Operators, Methods, and Keywords</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with JavaScript Operators, Methods, and Keywords
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that interacts with the Browser Object Model (BOM)<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 231px;"><p id="stemText" class="stemFont">You are using the
+        pushState() function in the history object as follows:
+        <code>
+            <br><br>history.pushState(stateObject, "My Page", "test.html");
+        </code>
+        <br><br>The stateObject is 1 MB in size.
+
+        <br><br>You need to retain information needed by the user as long as the window is open.
+
+        <br><br>What should you do?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c496"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382024"
+                                                                                        value="$$abMTA_98-382-024_option3"
+                                                                                        style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">Throw an InternalError.</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c494"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382024"
+                                                                                         value="$$abMTA_98-382-024_option1"
+                                                                                         style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">Use the pushState() function as is.</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c495"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382024"
+                                                                                         value="$$abMTA_98-382-024_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Use localStorage instead.</span>
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c493"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382024"
+                                                                                         value="$$abMTA_98-382-024_option0"
+                                                                                         style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">Use sessionStorage instead.</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">You should use sessionStorage instead. The sessionStorage function stores the
+                data for only that session. In other words, the data is there until the user closes the tab or the
+                window.
+
+                <br><br>You should not use the pushState() function as is. The pushstate() function has three
+                parameters: the state object, the title, and the URL. It is used to change the history entries. You
+                store data in the state object and it gets serialized. But this data is stored in the user's disk and
+                has a limit of 640k. Since the data you are storing is larger than the 640k (1 MB), you will not be able
+                to serialize it. If you try, the method will throw an exception.
+
+                <br><br>You should not use localStorage. When using localStorage, the data will not be deleted when the
+                browser is closed.
+
+                <br><br>You should not throw an InternalError because there are other options that allow you to store
+                the data. You would throw an error because you do not have any other solution and you need to report the
+                problem to the user. In this scenario, you have at least two solutions. The localStorage and
+                sessionStorage functions are solutions to this same problem (very limited storage size).
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with JavaScript Operators, Methods, and Keywords</p>
+            <p>SubObjective:</p>
+            <p>Complete and debug code that interacts with the Browser Object Model (BOM)<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Window</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window" tabindex="190">Click
+                here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Manipulating the browser history</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/History_API" tabindex="190">Click
+                here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>History</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/History" tabindex="190">Click
+                here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

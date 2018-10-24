@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Declare and use variables of primitive data types<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 87px;"><p id="stemText" class="stemFont">You need to convert undefined to different types.
+
+<br><br>Which conversion would be valid?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 2%; width: 920px; height: auto;"><input id="radio0" cid="c690" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382035" value="$$abMTA_98-382-035_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">Conversion to a number will be NaN.</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c692" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382035" value="$$abMTA_98-382-035_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Conversion to an object will be {undefined: 'undefined'}</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c693" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382035" value="$$abMTA_98-382-035_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">Conversion to a Boolean will be true.</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c691" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382035" value="$$abMTA_98-382-035_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">Conversion to string will be empty string ("").</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">Conversion to a number will be NaN. When an expression cannot be converted to a numeric type, as in the case of undefined, JavaScript will return NaN (not a number).
+
+<br><br>JavaScript is a type forgiving language. It will try its best to convert between the types to complete a specific operation. For example: "5" * "6" will be 30 since it will convert each item from string to number to get the result. In addition, "" will be converted to 0 when numeric and false when Boolean.
+
+<br><br>In this scenario, you are trying to convert undefined to object, string, number, and Boolean.
+
+<br><br>When converting undefined to string, it will be "undefined", not empty string ("").
+
+<br><br>In the case of a Boolean type, undefined is false. So are null and empty strings.
+
+<br><br>For object conversion, JavaScript cannot convert undefined to an object. For that conversion, it will throw a TypeError.
+<br><br><p>Objective:</p><p>Program with Variables, Data Types, and Functions</p><p>SubObjective:</p><p>Declare and use variables of primitive data types<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Type Conversion</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Type_conversion" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Comparison Operators</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>TypeError</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

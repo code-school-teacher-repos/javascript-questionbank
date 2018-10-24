@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 711px;"><p id="stemText" class="stemFont">The following page is loaded in the browser:
+
+<br><br>&lt;!DOCTYPE html&gt;
+<br>&lt;html&gt;
+<br>&lt;head&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;title&gt;Intro to JavaScript&lt;/title&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	&lt;meta charset="utf-8" /&gt;
+<br>&lt;/head&gt;
+<br>&lt;body&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;script&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        var x = parseFloat(prompt("Please enter a value"));
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        console.log(`The result is ${Math.round(Math.acos(x) * (180 / Math.PI))}`);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        console.log(`The result is ${Math.round(Math.cos(x))}`);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        console.log(`The result is ${Math.round(Math.asin(x) * (180 / Math.PI))}`);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        console.log(`The result is ${Math.round(Math.sin(x))}`);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        console.log(`The result is ${Math.round(Math.atan(x) * (180 / Math.PI))}`);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;/script&gt;
+<br>&lt;/body&gt;
+<br>&lt;/html&gt;
+
+<br><br>The following is shown in the console:
+
+<br><br>The result is 0  
+<br>The result is 1  
+<br>The result is 90  
+<br>The result is 1  
+<br>The result is 45
+
+<br><br>Which value was entered by the user?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c975" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382051" value="$$abMTA_98-382-051_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">0.5</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c972" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382051" value="$$abMTA_98-382-051_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">1</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c974" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382051" value="$$abMTA_98-382-051_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">30</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c973" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382051" value="$$abMTA_98-382-051_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">0</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">In order to get the following result in the console, the use would enter 1 as the value:
+
+<br><br>The result is 0  
+<br>The result is 1  
+<br>The result is 90  
+<br>The result is 1  
+<br>The result is 45
+
+<br><br>The methods used are:
+
+<br><br>Math.round(): Rounds a number to the nearest integer.
+<br>Math.sin():  Returns the sine of an angle given in radians. Result between -1 and 1.
+<br>Math.cos():  Returns the cosine of an angle given in radians. Result between -1 and 1.
+<br>Math.asin():  Returns the arcsine of a number, which is between -1 and 1.
+<br>Math.acos():  Returns the arccosine of a number, which is between -1 and 1.
+<br>Math.atan():  returns the arctan of a number, which is between -PI/2 and PI/2 radians. 
+
+<br><br>A value can be converted to degrees by multiplying the result with (180 / Math.PI). For example, the result of 90 can be explained as follows: You are finding the angle that has a sine of 1. Then the result is converted to degrees using (180 / Math.PI).That will be 90 degrees.
+
+<br><br>With the given function, if the user enters 0, the result would be:
+
+<br><br>The result is 90  
+<br>The result is 1  
+<br>The result is 0  
+<br>The result is 0  
+<br>The result is 0
+
+<br><br>For 30, the result would be:
+
+<br><br>The result is NaN  
+<br>The result is 0  
+<br>The result is NaN  
+<br>The result is -1  
+<br>The result is 88
+
+<br><br>Considering that the entered value (30) is not between -1 and 1, notice how the asin() and acos() calls return NaN (not a number).
+
+<br><br>For 0.5, the result would be:
+
+<br><br>The result is 60  
+<br>The result is 1  
+<br>The result is 30  
+<br>The result is 0  
+<br>The result is 27
+<br><br><p>Objective:</p><p>Program with Variables, Data Types, and Functions</p><p>SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Math</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

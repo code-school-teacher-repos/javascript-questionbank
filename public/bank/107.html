@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code to perform input validation<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 87px;"><p id="stemText" class="stemFont">You are working on a personal information form for Human Resources.
+
+<br><br>For each of the following statements, select Yes if the statement is true. Otherwise, select No.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img src="./107_files/abMTA_98-382-107.jpg" alt="Question includes an image that is part of the question and must be understood in order answer the question."><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div class="widgets null" style="left: 436px; top: 80px; width: 20px; height: 17px;"><input id="abMTA983821070" tabindex="-1" cid="c1872" class="widgets pointer" type="checkbox" name="abMTA983821070" value="" style="display:block;">
+<span id="span_abMTA983821070" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 488px; top: 80px; width: 19px; height: 17px;"><input id="abMTA983821071" tabindex="-1" cid="c1873" class="widgets pointer" type="checkbox" name="abMTA983821071" value="" style="display:block;">
+<span id="span_abMTA983821071" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 436px; top: 131px; width: 19px; height: 19px;"><input id="abMTA983821072" tabindex="-1" cid="c1874" class="widgets pointer" type="checkbox" name="abMTA983821072" value="" style="display:block;">
+<span id="span_abMTA983821072" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 488px; top: 131px; width: 17px; height: 17px;"><input id="abMTA983821073" tabindex="-1" cid="c1875" class="widgets pointer" type="checkbox" name="abMTA983821073" value="" style="display:block;">
+<span id="span_abMTA983821073" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 436px; top: 183px; width: 19px; height: 17px;"><input id="abMTA983821074" tabindex="-1" cid="c1876" class="widgets pointer" type="checkbox" name="abMTA983821074" value="" style="display:block;">
+<span id="span_abMTA983821074" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 488px; top: 183px; width: 19px; height: 17px;"><input id="abMTA983821075" tabindex="-1" cid="c1877" class="widgets pointer" type="checkbox" name="abMTA983821075" value="" style="display:block;">
+<span id="span_abMTA983821075" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 436px; top: 236px; width: 20px; height: 18px;"><input id="abMTA983821076" tabindex="-1" cid="c1878" class="widgets pointer" type="checkbox" name="abMTA983821076" value="" style="display:block;">
+<span id="span_abMTA983821076" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 488px; top: 236px; width: 21px; height: 17px;"><input id="abMTA983821077" tabindex="-1" cid="c1879" class="widgets pointer" type="checkbox" name="abMTA983821077" value="" style="display:block;">
+<span id="span_abMTA983821077" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 436px; top: 288px; width: 22px; height: 19px;"><input id="abMTA983821078" tabindex="-1" cid="c1880" class="widgets pointer" type="checkbox" name="abMTA983821078" value="" style="display:block;">
+<span id="span_abMTA983821078" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 488px; top: 288px; width: 18px; height: 18px;"><input id="abMTA983821079" tabindex="-1" cid="c1881" class="widgets pointer" type="checkbox" name="abMTA983821079" value="" style="display:block;">
+<span id="span_abMTA983821079" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 436px; top: 338px; width: 22px; height: 18px;"><input id="abMTA9838210710" tabindex="-1" cid="c1882" class="widgets pointer" type="checkbox" name="abMTA9838210710" value="" style="display:block;">
+<span id="span_abMTA9838210710" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 488px; top: 338px; width: 19px; height: 17px;"><input id="abMTA9838210711" tabindex="-1" cid="c1883" class="widgets pointer" type="checkbox" name="abMTA9838210711" value="" style="display:block;">
+<span id="span_abMTA9838210711" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 436px; top: 392px; width: 21px; height: 18px;"><input id="abMTA9838210712" tabindex="-1" cid="c1884" class="widgets pointer" type="checkbox" name="abMTA9838210712" value="" style="display:block;">
+<span id="span_abMTA9838210712" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 488px; top: 392px; width: 17px; height: 16px;"><input id="abMTA9838210713" tabindex="-1" cid="c1885" class="widgets pointer" type="checkbox" name="abMTA9838210713" value="" style="display:block;">
+<span id="span_abMTA9838210713" style="position: relative !important;display: block;" class=""></span></div><div id="overlayAnswer"></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The following statements are true:
+
+<br><br>First name and last name are required fields.
+<br>The phone number input field should have a pattern attribute.
+<br>The field for rating the overall company website should be a range slider.
+<br>The Contact Me email address should be an input box of type email.
+
+<br><br>Necessary information should always be made required. The user should not be able to submit the form when critical information is not yet provided. First name and last name match this category and they should be provided before submitting the form.
+
+<br><br>The phone number is an input box of type 'tel' and it should have the 'pattern' attribute. With such attribute, the developer can clearly indicate the format of the telephone number in order for it to be considered valid (for example, the pattern tries to match (xxx)xxx-xxxx).
+
+<br><br>The range sliders are an excellent way of asking the user for numeric input between specific brackets. For example, with the type 'range' input box, you can specific the min, max, and step values. The user can then, move the handle between the min and max to indicate the value. If you use the input box of type "text", then you will have to convert the value to numeric after reading it and handle all the validations.
+
+<br><br>Having the email address input box of type 'email' will help because the user will not be able to submit the form until a valid email is provided. This field should also be made required.
+
+<br><br>Many UX (User eXperience) designers agree that it is not a good programming practice to include a reset button that clears out all the fields on the form. The reason is that this field sits very close to the submit button and the user might click it by mistake. In addition, if the user makes mistakes in filling out the fields, error handling and appropriate input types should handle the cases so the user does not have to clear the fields and start over.
+
+<br><br>The start date field should be of type 'date', not 'text'. Many browsers support the date dropdown for the user to select from. You can also indicate min and max values so the user will not be able to enter values out of range.
+
+<br><br>Server validation should still exist in addition to the client side validation. Hackers can intercept the data on the way to the server and enter malicious information.
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Complete and debug code to perform input validation<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Form data validation</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" tabindex="190">Click here for more information</a></p><br><p>Web resource</p><p>-</p><p>Reset and Cancel Buttons</p><p><a target="_blank" href="https://www.nngroup.com/articles/reset-and-cancel-buttons/" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

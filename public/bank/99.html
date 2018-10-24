@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that retrieves input from forms and sets form field values<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 231px;"><p id="stemText" class="stemFont">You are creating a student form that needs to be submitted to the server. One of the elements on the form is the course ID.
+
+<br><br>You need to create the course ID to meet the following requirements:
+
+<br><br>* When then user clicks on the label, the input box gets the focus.
+<br>* The input box shows the format to be used when typing the course ID.
+
+<br><br>Which code segment should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio2" cid="c1728" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382099" value="$$abMTA_98-382-099_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;div&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="courseId"&gt;Course Id:&lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="Id" name="courseId" value="CSC-100"&gt;
+&lt;/div&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1727" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382099" value="$$abMTA_98-382-099_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;div&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="courseId"&gt;Course Id:&lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="Id" name="courseId" placeholder="CSC-100"&gt;
+&lt;/div&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1729" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382099" value="$$abMTA_98-382-099_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;div&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label&gt;Course Id:&lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="Id" name="courseId" value="CSC-100"&gt;
+&lt;/div&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1726" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382099" value="$$abMTA_98-382-099_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;div&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="Id"&gt;Course Id:&lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" id="Id" name="courseId" placeholder="CSC-100"&gt;
+&lt;/div&gt;</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">You should use the following code segment to meet the requirements:
+
+<br><br>&lt;div&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;label for="Id"&gt;Course Id:&lt;/label&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;input type="text" id="Id" name="courseId" placeholder="CSC-100"&gt;
+<br>&lt;/div&gt;
+
+<br><br>The label preceding the input box needs to have the for attribute that references the ID of the input. Because the id is Id, the label should be: &lt;label for="Id"&gt;. Now when the user clicks on the label, the input box will have the focus. Using the for attribute to refer to the name of the input box instead of the id is incorrect.
+
+<br><br>The second requirement states that the format of the course id needs to show in the input box. This is accomplished by using the placeholder attribute. The format will appear as soon as the form loads, but disappears when the user starts typing. The input box will look like the following:
+
+<br><br>&lt;input type="text" id="Id" name="courseId" placeholder="CSC-100"&gt;
+
+<br><br>Using the value attribute instead of placeholder is incorrect because that will put the actual text in the input box, and that is not what the requirement states.
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Complete and debug code that retrieves input from forms and sets form field values<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Your First HTML Form</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

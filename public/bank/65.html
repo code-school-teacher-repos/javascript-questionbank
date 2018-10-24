@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Implement and Analyze Decisions and Loops</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Implement and Analyze Decisions and Loops
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Evaluate expressions that use logical and comparison operators<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 159px;"><p id="stemText" class="stemFont">You have the following declarations:
+
+<br><br>var x = new String('welcome to JavaScript');
+<br>var y = new String('welcome to JavaScript');
+
+<br><br>Which expression would evaluate to true?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c1218" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382065" value="$$abMTA_98-382-065_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">x === y</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1215" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382065" value="$$abMTA_98-382-065_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">x == 'welcome to JavaScript'</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1216" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382065" value="$$abMTA_98-382-065_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">x === 'welcome to JavaScript'</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1217" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382065" value="$$abMTA_98-382-065_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">x == y</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The expression that is true is:
+
+<br><br>x == 'welcome to JavaScript'
+
+<br><br>In this scenario, you are using the == operator, which means that type conversion will take place. The object x is converted to 'welcome to JavaScript' and the string comparison returns true.
+
+<br><br>The expression x === 'welcome to JavaScript' is false because the === operator compares content and type. Since x is an object and 'welcome to JavaScript' is a string literal, the result is false.
+
+<br><br>x == y and x === y are both false because x and y are objects referencing different locations in memory and for that reason they will not be equal.
+<br><br><p>Objective:</p><p>Implement and Analyze Decisions and Loops</p><p>SubObjective:</p><p>Evaluate expressions that use logical and comparison operators<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Comparison operators</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Expressions and operators</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that locates, modifies, and adds HTML elements and attributes<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 519px;"><p id="stemText" class="stemFont">Your HTML page contains the following segment:
+
+<br><br>    &lt;div&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        Lorem Ipsum has been the industry's standard dummy
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;div&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            Lorem Ipsum is that it has a more-or-less normal distribution
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;div&gt;over the years, sometimes by accident
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            &lt;span id="variation"&gt; There are many variations of passages&lt;/span&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            Contrary to popular belief, Lorem Ipsum is not simply random text&lt;/div&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        &lt;/div&gt;
+<br>    &lt;/div&gt;
+
+<br><br>When the page is loaded in the browser, you need the following to be displayed:
+
+<br><br>Lorem Ipsum has been the industry's standard dummy
+<br>Lorem Ipsum is that it has a more-or-less normal distribution
+<br>over the years, sometimes by accident 
+<br>There are many variations of passages 
+<br>Contrary to popular belief, Lorem Ipsum is not simply random text
+
+<br><br>Which statement should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 2%; width: 920px; height: auto;"><input id="radio0" cid="c1621" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382092" value="$$abMTA_98-382-092_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">document.getElementById('variation').style.display = "block";</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1624" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382092" value="$$abMTA_98-382-092_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">document.getElementById('variation').style.display = "none";</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1622" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382092" value="$$abMTA_98-382-092_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">document.getElementById('variation').style.display = "inline-block";</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1623" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382092" value="$$abMTA_98-382-092_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">document.getElementById('variation').style.display = "inline";</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The code that helps you accomplish the task is:
+
+<br><br>document.getElementById('variation').style.display = "block";
+
+<br><br>The 'variation' element is a &lt;span&gt;, and spans flow inline with the other elements. In other words, if the display property is set to 'inline', the default, the content will flow as follows:
+
+<br><br>Lorem Ipsum has been the industry's standard dummy
+<br>Lorem Ipsum is that it has a more-or-less normal distribution
+<br>over the years, sometimes by accident There are many variations of passages Contrary to popular belief, Lorem Ipsum is not simply random text
+
+<br><br>For the span to display like a div and have its own block, you need to set the display property to "block".
+
+<br><br>Setting the display to "inline-block" means that the element itself is rendered as a block, but the other adjacent inline elements will be displayed on the same line.
+
+<br><br>Setting the display property to "none" will not display the element, and the rest of the content would be:
+
+<br><br>Lorem Ipsum has been the industry's standard dummy
+<br>Lorem Ipsum is that it has a more-or-less normal distribution
+<br>over the years, sometimes by accident Contrary to popular belief, Lorem Ipsum is not simply random text
+<br><br><p>Objective:</p><p>Interact with the Document Object Model</p><p>SubObjective:</p><p>Complete and debug code that locates, modifies, and adds HTML elements and attributes<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Display</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>document.getElementById()</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

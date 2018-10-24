@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Implement and Analyze Decisions and Loops</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Implement and Analyze Decisions and Loops
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Evaluate expressions that use logical and comparison operators<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 327px;"><p id="stemText" class="stemFont">You have the following declarations:
+
+<br><br>var x = 7;
+<br>var y = 13;
+<br>var z = true;
+<br>var a = null;
+<br>var b = 0;
+<br>var c = -1;
+<br>var d = "   ";
+
+<br><br>You need to complete the code so the process can start.
+
+<br><br>Which expressions should you use? To answer, select the appropriate options from the drop-down menus.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img src="./62_files/abMTA_98-382-062.jpg" alt="Question includes an image that is part of the question and must be understood in order answer the question."><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div cid="c1172" class="widgets undefined" style="left: 70px; top: 20px; width: 213px; height: 21px; z-index: 1;"><span style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+<div id="select0DIV">
+	<select id="select0" tabindex="-1" class="selects correctAnswerBackground" style="display: table-cell; width: 100%; height: 100%;"><option selected="selected" value=""></option>
+	<option value="c &amp;&amp; b">c &amp;&amp; b</option><option value="d.trim() || a">d.trim() || a</option><option value="NaN &amp;&amp; z">NaN &amp;&amp; z</option><option value="z &amp;&amp; (++c)">z &amp;&amp; (++c)</option><option value="undefined || {}">undefined || {}</option></select>
+</div></div><div cid="c1173" class="widgets undefined" style="left: 333px; top: 17px; width: 205px; height: 21px; z-index: 1;"><span style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+<div id="select1DIV">
+	<select id="select1" tabindex="-1" class="selects correctAnswerBackground" style="display: table-cell; width: 100%; height: 100%;"><option selected="selected" value=""></option>
+	<option value="++x &gt; 7 &amp;&amp; y-- &lt;= 13">++x &gt; 7 &amp;&amp; y-- &lt;= 13</option><option value="c &amp;&amp; b">c &amp;&amp; b</option><option value="d.trim() || a">d.trim() || a</option><option value="NaN &amp;&amp; z">NaN &amp;&amp; z</option><option value="z &amp;&amp; (++c)">z &amp;&amp; (++c)</option></select>
+</div></div><div id="overlayAnswer"></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The code block should be completed as follows:
+
+<br><br>if ((undefined || {}) &amp;&amp; (++x &gt; 7 &amp;&amp; y-- &lt;= 13))
+<br>    startProcess();
+
+<br><br>With both expressions being true, the startProcess() function will be called.
+
+<br><br>undefined is not true, but any object is. Since {} is true, (undefined || {}) will evaluate to true.
+
+<br><br>Incrementing x will give 8, which is greater than 7. Also y, being 13, is less than or equal to 13. Therefore, the expression (++x &gt; 7 &amp;&amp; y-- &lt;= 13) is true as well.
+
+<br><br>The expression (d.trim() || a) is false. Trimming d will result in an empty string, which is false, and a, being null is also false. 
+
+<br><br>The expression (NaN &amp;&amp; z) is also false. Although z is true, NaN is false and (false &amp;&amp; true) is false.
+
+<br><br>The expression (c &amp;&amp; b) is false. c being -1 is true, but b is false since it is 0.
+
+<br><br>The expression (z &amp;&amp; (++c)) is also false. z is true, but ++c will increment c to 0, which is false.
+<br><br><p>Objective:</p><p>Implement and Analyze Decisions and Loops</p><p>SubObjective:</p><p>Evaluate expressions that use logical and comparison operators<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Comparison operators</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Expressions and operators</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

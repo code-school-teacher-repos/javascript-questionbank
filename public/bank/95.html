@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that locates, modifies, and adds HTML elements and attributes<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 759px;"><p id="stemText" class="stemFont">The HTML in a document
+        starts as follows:
+        <code>
+            <br><br>&lt;ul id="myItems"&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;a href="Question10.html"&gt;Question 10&lt;/a&gt;&lt;/li&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;li&gt;&lt;a href="Question20.html"&gt;Question 20&lt;/a&gt;&lt;/li&gt;
+            <br>&lt;/ul&gt;
+        </code>
+        <br><br>Then, you run the following code:
+        <code>
+            <br><br>&lt;script&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var inner = document.createElement("a");
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inner.setAttribute("href", "Question.html");
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var template = document.createElement("li");
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; template.appendChild(inner);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var list = document.getElementById("myItems");
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (var i = 0; i &lt; 5; i++) {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var item = template.cloneNode(true);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; item.firstChild.setAttribute('href',
+            `Question${i+1}.html`);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; item.firstChild.innerHTML = `Question ${i +
+            1}`;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; list.appendChild(item);
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+            <br>&lt;/script&gt;
+        </code>
+
+        <br><br>You use the following style:
+        <code>
+            <br><br>&lt;style&gt;
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ul {list-style-type:none;}
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ul li a {text-decoration: none;}
+            <br>&lt;/style&gt;
+        </code>
+        <br><br>What will be displayed in the browser?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio1" cid="c1667"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382095"
+                                                                                        value="$$abMTA_98-382-095_option1"
+                                                                                        style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Question 10
+Question 20</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1668"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382095"
+                                                                                         value="$$abMTA_98-382-095_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Question 10
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5
+Question 20</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1669"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382095"
+                                                                                         value="$$abMTA_98-382-095_option3"
+                                                                                         style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">Question 10.html
+Question 1.html
+Question 2.html
+Question 3.html
+Question 4.html
+Question 5.html
+Question 20.html</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1666"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382095"
+                                                                                         value="$$abMTA_98-382-095_option0"
+                                                                                         style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">Question 10
+Question 20
+Question 1
+Question 2
+Question 3
+Question 4
+Question 5</span></div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">After running the code in the script, the following will be displayed in the
+                browser:
+
+                <br><br>Question 10
+                <br>Question 20
+                <br>Question 1
+                <br>Question 2
+                <br>Question 3
+                <br>Question 4
+                <br>Question 5
+
+                <br><br>You are starting with the first two list items: Question 10 and Question 20. The code starts by
+                creating an &lt;a&gt; element (&lt;a&gt;&lt;/a&gt;). It sets its href to Question.html. An &lt;li&gt;
+                element is created, and the &lt;a&gt; element is appended to it.
+
+                <br><br>getElementById() retrieves the myItems unordered list. The loop iterates 5 times, and in each
+                iteration the following happens:
+
+                <br><br>* The &lt;li&gt; element called template is cloned with its content.
+                <br>* The clone's href attribute and its innerHTML are set based on the Question text and the loop index
+                i.
+                <br>* The resulting &lt;li&gt; element is appended to the list.
+
+                <br><br>When this process is done: Question 1, Question 2, Question 3, Question 4, and Question 5 are
+                created. They are appended to the original Question 10 and Question 20 resulting in:
+
+                <br><br>Question 10
+                <br>Question 20
+                <br>Question 1
+                <br>Question 2
+                <br>Question 3
+                <br>Question 4
+                <br>Question 5
+                <br><br>
+            <p>Objective:</p>
+            <p>Interact with the Document Object Model</p>
+            <p>SubObjective:</p>
+            <p>Complete and debug code that locates, modifies, and adds HTML elements and attributes<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Node.appendChild()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Document.createElement()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Node.appendChild()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>Node.cloneNode()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode" tabindex="190">Click
+                here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>document.getElementById()</p>
+            <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>

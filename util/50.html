@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 87px;"><p id="stemText" class="stemFont">You are using the Math object to create a package for financial calculations.
+
+<br><br>For each of the following statements, select Yes if the statement is true.  Otherwise, select No.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img src="./50_files/abMTA_98-382-050.jpg" alt="Question includes an image that is part of the question and must be understood in order answer the question."><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div class="widgets null" style="left: 423px; top: 76px; width: 21px; height: 17px;"><input id="abMTA983820500" tabindex="-1" cid="c945" class="widgets pointer" type="checkbox" name="abMTA983820500" value="" style="display:block;">
+<span id="span_abMTA983820500" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 475px; top: 76px; width: 19px; height: 16px;"><input id="abMTA983820501" tabindex="-1" cid="c946" class="widgets pointer" type="checkbox" name="abMTA983820501" value="" style="display:block;">
+<span id="span_abMTA983820501" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 423px; top: 128px; width: 20px; height: 18px;"><input id="abMTA983820502" tabindex="-1" cid="c947" class="widgets pointer" type="checkbox" name="abMTA983820502" value="" style="display:block;">
+<span id="span_abMTA983820502" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 475px; top: 128px; width: 19px; height: 17px;"><input id="abMTA983820503" tabindex="-1" cid="c948" class="widgets pointer" type="checkbox" name="abMTA983820503" value="" style="display:block;">
+<span id="span_abMTA983820503" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 423px; top: 180px; width: 23px; height: 18px;"><input id="abMTA983820504" tabindex="-1" cid="c949" class="widgets pointer" type="checkbox" name="abMTA983820504" value="" style="display:block;">
+<span id="span_abMTA983820504" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 475px; top: 180px; width: 22px; height: 18px;"><input id="abMTA983820505" tabindex="-1" cid="c950" class="widgets pointer" type="checkbox" name="abMTA983820505" value="" style="display:block;">
+<span id="span_abMTA983820505" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 423px; top: 232px; width: 23px; height: 18px;"><input id="abMTA983820506" tabindex="-1" cid="c951" class="widgets pointer" type="checkbox" name="abMTA983820506" value="" style="display:block;">
+<span id="span_abMTA983820506" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 475px; top: 232px; width: 20px; height: 18px;"><input id="abMTA983820507" tabindex="-1" cid="c952" class="widgets pointer" type="checkbox" name="abMTA983820507" value="" style="display:block;">
+<span id="span_abMTA983820507" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 423px; top: 285px; width: 23px; height: 18px;"><input id="abMTA983820508" tabindex="-1" cid="c953" class="widgets pointer" type="checkbox" name="abMTA983820508" value="" style="display:block;">
+<span id="span_abMTA983820508" style="position: relative !important;display: block;" class=""></span></div><div class="widgets null" style="left: 475px; top: 285px; width: 21px; height: 18px;"><input id="abMTA983820509" tabindex="-1" cid="c954" class="widgets pointer" type="checkbox" name="abMTA983820509" value="" style="display:block;">
+<span id="span_abMTA983820509" style="position: relative !important;display: block;" class=""></span></div><div id="overlayAnswer"></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">Math.abs(x) when x is 1024 evaluates to 1024, not -1024. The abs() method returns the absolute value of a number (the number without the negative sign). For example,  Math.abs(-1024) is 1024 and Math.abs(1024) is 1024 as well.
+
+<br><br>All the methods in the Math object are static. Since all the methods and properties in the Math class are static, a Math object is not created to call these properties and methods. For example, the following is incorrect:
+
+<br><br>var m = new Math()
+<br>var x = m.abs(-34);
+
+<br><br>Math.ceil(0.5) evaluates to 1. The ceil() method returns the smallest integer greater than or equal to the given number. In this scenario, the smallest integer that is greater than or equal to 0.5 is 1. Other examples include Math.ceil(3.3) is 4, and Math.ceil(87.1) is 88.
+
+<br><br>Math.acos(0.5)*(180/Math.PI) evaluates to 60. The Math.acos() method returns the arccosine of a given number. The parameter needs to be between -1 and 1, and the result is between 0 and PI (3.14159). That is the result in radians, not degrees. In order to convert the answer to degrees, it needs to be multiplied by (180/Math.PI).
+
+<br><br>The same concept applies to the Math.asin() method, which returns the arcsine of a given number. In this scenario,
+
+<br><br>Math.acos(0.5) evaluates to 1.047.
+<br>Math.asin(0.5) evaluates to 0.524.
+
+<br><br>After multiplying by (180/Math.PI), the result is:
+
+<br><br>Math.acos(0.5)*(180/Math.PI) evaluates to 60.
+<br>Math.asin(0.5)*(180/Math.PI) evaluates to 30.
+<br><br><p>Objective:</p><p>Program with Variables, Data Types, and Functions</p><p>SubObjective:</p><p>Complete and debug code that uses built-in Math functions<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Math</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

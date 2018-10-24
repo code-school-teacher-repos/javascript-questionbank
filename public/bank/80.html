@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Identify and construct the Document Object Model (DOM) tree<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 159px;"><p id="stemText" class="stemFont">An HTML document contains a title and one script in the body.
+
+<br><br>You need to add code to write the title of the page and the content of the script and change the background color of the page to yellow.
+
+<br><br>Which code should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio1" cid="c1447" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382080" value="$$abMTA_98-382-080_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">window.document.write(`title: ${window.document.head.title}&lt;br /&gt;`);
+window.document.write(`Scripts: ${window.document.scripts.text}&lt;br /&gt;`);
+window.document.body.style.backgroundColor = 'yellow';</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1446" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382080" value="$$abMTA_98-382-080_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">window.document.write(`title: ${window.document.title}&lt;br /&gt;`);
+window.document.write(`Scripts: ${window.document.scripts[0].text}&lt;br /&gt;`);
+window.document.body.style.backgroundColor = 'yellow';</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1449" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382080" value="$$abMTA_98-382-080_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">window.document.write(`title: ${window.document.title}&lt;br /&gt;`);
+window.document.write(`Scripts: ${window.document.scripts.length}&lt;br /&gt;`);
+window.document.body.style.color = 'yellow';</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1448" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382080" value="$$abMTA_98-382-080_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">window.document.write(`title: ${window.document.title}&lt;br /&gt;`);
+window.document.write(`Scripts: ${window.document.scripts.toString()}&lt;br /&gt;`);
+window.document.body.style.backgroundColor = 'yellow';</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The set of code that meets the requirements is:
+
+<br><br>window.document.write(`title: ${window.document.title}&lt;br /&gt;`);
+<br>window.document.write(`Scripts: ${window.document.scripts[0].text}&lt;br /&gt;`);
+<br>window.document.body.style.backgroundColor = 'yellow';
+
+<br><br>The document object has a write (or writeln) function that writes the content on the screen. It also has the title property that contains the title of the page. The scripts property of the document object contains a collection of all the scripts on the page. Since there is only one script per the requirements, that script can be gotten using scripts[0].
+
+<br><br>The background color is part of the document's body style. To set that value, you should use document.body.style.backgroundColor. 
+
+<br><br>The following code does not print the title of the page and the script will be undefined because it is not subscripted before retrieving the text:
+
+<br><br>window.document.write(`title: ${window.document.head.title}&lt;br /&gt;`);
+<br>window.document.write(`Scripts: ${window.document.scripts.text}&lt;br /&gt;`);
+<br>window.document.body.style.backgroundColor = 'yellow';
+
+<br><br>The following code will print the title and change the background color, but will not print the script content:
+
+<br><br>window.document.write(`title: ${window.document.title}&lt;br /&gt;`);
+<br>window.document.write(`Scripts: ${window.document.scripts.toString()}&lt;br /&gt;`);
+<br>window.document.body.style.backgroundColor = 'yellow';
+
+<br><br>Instead, the following will be displayed:
+
+<br><br>Scripts: [object HTMLCollection]
+
+<br><br>This following code shows the title of the page as well as the number of scripts (1) in yellow text, but does not set the background color or show the script content:
+
+<br><br>window.document.write(`title: ${window.document.title}&lt;br /&gt;`);
+<br>window.document.write(`Scripts: ${window.document.scripts.length}&lt;br /&gt;`);
+<br>window.document.body.style.color = 'yellow';
+<br><br><p>Objective:</p><p>Interact with the Document Object Model</p><p>SubObjective:</p><p>Identify and construct the Document Object Model (DOM) tree<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Window.document</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/document" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

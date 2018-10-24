@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that retrieves input from forms and sets form field values<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 111px;"><p id="stemText" class="stemFont">You need to create a form that will prompt the user for a favorite baseball team. As soon as the user starts typing, the form should display a matching list of options.
+
+<br><br>Which form should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c1819" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382105" value="$$abMTA_98-382-105_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form method="post"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="team"&gt;Favorite Baseball team: &lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="team" id="team" list="myFavorite"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select id="myFavorite" multiple&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Baltimore Orioles&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Arizona Diamondbacks&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Boston Red Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Atlanta Braves&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago White Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago Cubs&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cleveland Indians&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cincinnati Reds&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Houston Astros&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Los Angeles Dodgers&lt;/option&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
+&lt;/form&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1818" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382105" value="$$abMTA_98-382-105_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form method="post"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="team"&gt;Favorite Baseball team: &lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="team" id="team" list="myFavorite"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select id="myFavorite"&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Baltimore Orioles&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Arizona Diamondbacks&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Boston Red Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Atlanta Braves&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago White Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago Cubs&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cleveland Indians&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cincinnati Reds&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Houston Astros&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Los Angeles Dodgers&lt;/option&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
+&lt;/form&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1816" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382105" value="$$abMTA_98-382-105_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form method="post"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="team"&gt;Favorite Baseball team: &lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="team" id="team" list="myFavorite"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;datalist id="myFavorite"&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Baltimore Orioles&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Arizona Diamondbacks&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Boston Red Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Atlanta Braves&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago White Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago Cubs&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cleveland Indians&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cincinnati Reds&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Houston Astros&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Los Angeles Dodgers&lt;/option&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/datalist&gt;
+&lt;/form&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1817" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382105" value="$$abMTA_98-382-105_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form method="post"&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="team"&gt;Favorite Baseball team: &lt;/label&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="team" id="team" list="myFavorite"&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Baltimore Orioles&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Arizona Diamondbacks&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Boston Red Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Atlanta Braves&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago White Sox&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago Cubs&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cleveland Indians&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cincinnati Reds&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Houston Astros&lt;/option&gt;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Los Angeles Dodgers&lt;/option&gt;
+&lt;/form&gt;</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">You should use the following form:
+
+<br><br>&lt;form method="post"&gt;
+<br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="team"&gt;Favorite Baseball team: &lt;/label&gt;
+<br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="text" name="team" id="team" list="myFavorite"&gt;
+<br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;datalist id="myFavorite"&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Baltimore Orioles&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Arizona Diamondbacks&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Boston Red Sox&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Atlanta Braves&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago White Sox&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Chicago Cubs&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cleveland Indians&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Cincinnati Reds&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Houston Astros&lt;/option&gt;
+<br>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&gt;Los Angeles Dodgers&lt;/option&gt;
+<br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/datalist&gt;
+<br>&lt;/form&gt;
+
+<br><br>The autocomplete box accomplishes the task. It provides an input box and a datalist of options. The input box is tied to the datalist using the 'list' property. As soon as the user starts typing, the form displays a list of matching options. The datalist contains options similar to the select box.
+
+<br><br>You should not use the form that provides the options without the datalist. The list of options would not be displayed as the user starts typing.
+
+<br><br>You should not use the code set that wraps the options with a select instead of a datalist. Although select shows the list of teams in a dropdown, that list is not tied to the input box, and as the user types in the input box, the drop-down will not narrow down the list of options.
+
+<br><br>You should not use the code set that adds the 'multiple' attribute to the select box. The user can select more than one team from the list, but there is no relation to the input box. As the user is typing in the input box, the select box will not change to narrow down the options.
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Complete and debug code that retrieves input from forms and sets form field values<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>The native form widgets</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/The_native_form_widgets" tabindex="190">Click here for more information</a></p><br><p>Web resource</p><p>-</p><p>HTML &lt;datalist&gt; Tag</p><p><a target="_blank" href="https://www.w3schools.com/tags/tag_datalist.asp" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

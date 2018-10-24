@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with the Document Object Model</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with the Document Object Model
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Identify and handle HTML events<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 159px;"><p id="stemText" class="stemFont">You are writing code so that when the user selects a language from a drop-down menu, the corresponding value will be displayed in the alert.
+
+<br><br>You need to complete the code.
+
+<br><br>Which code snippet should you use? To answer, select the appropriate option from the drop-down menu.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img src="./82_files/abMTA_98-382-082.jpg" alt="Question includes an image that is part of the question and must be understood in order answer the question."><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div cid="c1476" class="widgets undefined" style="left: 456px; top: 65px; width: 363px; height: 21px; z-index: 1;"><span style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+<div id="select0DIV">
+	<select id="select0" tabindex="-1" class="selects correctAnswerBackground" style="display: table-cell; width: 100%; height: 100%;"><option selected="selected" value=""></option>
+	<option value="onchange=&quot;handleEvent();&quot;">onchange="handleEvent();"</option><option value="onchange=&quot;handleEvent(event);&quot;">onchange="handleEvent(event);"</option><option value="onkeypress=&quot;handleEvent(event);&quot;">onkeypress="handleEvent(event);"</option><option value="onselect=&quot;handleEvent(event);&quot;">onselect="handleEvent(event);"</option></select>
+</div></div><div id="overlayAnswer"></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The missing code from the fragment is as follows:
+
+<br><br>onchange="handleEvent(event);"
+
+<br><br>This code  handles the onchange event in the HTML. When the option in the drop-down changes, the event will fire and call the handleEvent(event) by passing the event information. In the event body, the event's target value contains the value of the HTML &lt;option&gt; being selected. That value is displayed in the alert.
+
+<br><br>In the following option, the event function will not be called and no alert will be displayed on the screen because the event information is not being passed as a parameter:
+
+<br><br>onchange="handleEvent();"
+
+<br><br>The onkeypress is not correct for this scenario. The event will not fire when the user presses keys related to the text in the drop-down. Key press events are mostly related to input boxes (&lt;input type="text" onkeypress="func()"&gt;). 
+
+<br><br>Using onselect will not cause the event to fire and display the value from the corresponding option:
+
+<br><br>onselect="handleEvent(event);"
+
+<br><br>This event works mostly with input elements and text areas.
+<br><br><p>Objective:</p><p>Interact with the Document Object Model</p><p>SubObjective:</p><p>Identify and handle HTML events<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>change</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Events/change" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

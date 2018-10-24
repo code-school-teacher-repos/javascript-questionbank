@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Implement and Analyze Decisions and Loops</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Implement and Analyze Decisions and Loops
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Evaluate expressions that use logical and comparison operators<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 279px;"><p id="stemText" class="stemFont">You have the following declarations:
+
+<br><br>   var obj1 = {'name':'tester'}, obj2 = {'name':'tester'};
+<br>   var exp1 = obj1 == obj2;
+<br>   var exp2 = obj1 === obj2;
+<br>   var exp3 = NaN === NaN;
+<br>   var exp4 = 'test' == new String('test');
+
+<br><br>You need to complete the code so "Hello, world!" will show in the browser when the page loads.
+
+<br><br>Which expression should you use? To answer, select the appropriate expression from the drop-down menu.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img src="./61_files/abMTA_98-382-061.jpg" alt="Question includes an image that is part of the question and must be understood in order answer the question."><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div cid="c1160" class="widgets undefined" style="left: 43px; top: 16px; width: 68px; height: 21px; z-index: 1;"><span style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+<div id="select0DIV">
+	<select id="select0" tabindex="-1" class="selects correctAnswerBackground" style="display: table-cell; width: 100%; height: 100%;"><option selected="selected" value=""></option>
+	<option value="exp1">exp1</option><option value="exp2">exp2</option><option value="exp3">exp3</option><option value="exp4">exp4</option></select>
+</div></div><div id="overlayAnswer"></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">exp4 will evaluate to true, and that causes "Hello, world!" to be displayed in the browser window.
+
+<br><br>Strings are equal when they have the same sequence of characters and they are the same length. In this scenario, String('test') will be 'test', which means 'test' == 'test', and that evaluates to true. Having an expression evaluates to true in an "if" statement causes the body of the "if" statement to execute and make "Hello, world!" show in the browser. Since this is the only expression that evaluates to true, placing it in the blank will cause "Hello, world!" to display.
+
+<br><br>You should not select exp1 or exp2. The following declares two objects: obj1 and obj2:
+
+<br><br>var obj1 = {'name':'tester'}, obj2 = {'name':'tester'};
+
+<br><br>These objects contain the same member (name) with the same content (tester). However, JavaScript treats objects as references. In other words, obj1 and obj2 do not hold the actual contents. Rather, they hold a memory address to where that content is. That address is different for each one. For that reason, obj1 and obj2 are not equal, even when they are tested with the === operator. Therefore, exp1 being obj1 == obj2 is false and exp2 being obj1 === obj2 is also false. A false expression in the "if" block will cause the body of the "if" statement not to execute and "Hello, world!" will not be displayed.
+
+<br><br>NaN stands for Not a Number and it is not even equal to another NaN. So NaN == NaN is always false. With a false result in exp3, the body of "if" will not execute and "Hello, world!" will not show in the browser.
+<br><br><p>Objective:</p><p>Implement and Analyze Decisions and Loops</p><p>SubObjective:</p><p>Evaluate expressions that use logical and comparison operators<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Comparison operators</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Expressions and operators</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

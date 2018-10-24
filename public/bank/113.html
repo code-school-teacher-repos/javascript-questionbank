@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code to perform input validation<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 159px;"><p id="stemText" class="stemFont">You are redesigning the form for the enrollment section of a college website. One of the elements on the page is the SAT score.
+
+<br><br>You need to choose the best input type to use for this element.
+
+<br><br>What is the BEST input type to use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio2" cid="c1980" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382113" value="$$abMTA_98-382-113_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">text</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c1978" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382113" value="$$abMTA_98-382-113_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">range</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1979" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382113" value="$$abMTA_98-382-113_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">number</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1981" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382113" value="$$abMTA_98-382-113_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">select</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The best fit for this type of element is range. Here is an example:
+
+<br><br>&lt;div&gt;
+<br>&nbsp;&nbsp;   &lt;label for="sat"&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Enter the SAT score:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;/label&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   0
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;input type="range" id="sat" name="sat" value="800" min="0" max="1600" step="10"&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   1600
+<br>&lt;/div&gt;
+
+<br><br>The range input type is made of a horizontal slider bar with the minimum value on the left and the maximum value on the right (not all browsers support showing the min and the max in the control. If they are not supported, you can add them in the HTML). The user can swipe a vertical handle bar left/right to decrease/increase the value. When you use the range input type, the user can select the value from a list, and therefore the chance of an error is very limited. You are also able to set the minimum and maximum values allowed, as well as a step. Many users might not be able to remember the exact score, so stepping by 10 in this scenario can be helpful. All recent browsers are almost up-to-date with this type of element. It is also visually simple for the user to move the handle on the control and select the score.
+
+<br><br>You should not use the number input type. The number input type is composed of an input box with up and down arrows on the right-hand corner. The user can click the arrows to increase/decrease the value. Using a number type is also doable, but not as good as the slider (range).  The range is visually more appealing, and with a number it is harder for the user to click the up and down arrows to go between large brackets (for example the default value is 600 and the user needs to go up to 1450).
+
+<br><br>You should not use the select input type. You would need to provide all possible values from 0 to 1600.
+
+<br><br>You should not use the test input type. You would need to read the value, convert to number, make sure it is between the minimum and maximum allowable values, and generate error messages when the number is invalid. This is too much work compared to a type that already supports this feature (range).
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Complete and debug code to perform input validation<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Form data validation</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

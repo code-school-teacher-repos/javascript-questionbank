@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that retrieves input from forms and sets form field values<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 159px;"><p id="stemText" class="stemFont">You are creating a form to fill out employee information with the following requirements:
+
+<br><br>* When submitted, the form will submit to the same page.
+<br>* When the user clicks a button, the form data will be cleared out.
+
+<br><br>Which form tag and input elements should you use?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer" style="left: 20px; margin-top: 2%; width: 920px; height: auto;"><input id="radio0" cid="c1741" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382100" value="$$abMTA_98-382-100_option0" style="display:block;">
+<span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form method="post" enctype="application/x-www-form-urlencoded"&gt;
+
+&lt;div&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="reset" value="Reset"&gt;
+&lt;/div&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c1744" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382100" value="$$abMTA_98-382-100_option3" style="display:block;">
+<span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form action="http://localhost/default.html" method="post" enctype="application/x-www-form-urlencoded"&gt;
+
+&lt;div&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="button" value="Reset"&gt;
+&lt;/div&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c1742" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382100" value="$$abMTA_98-382-100_option1" style="display:block;">
+<span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form method="post" enctype="application/x-www-form-urlencoded"&gt;
+
+&lt;div&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Reset"&gt;
+&lt;/div&gt;</span></div><div tabindex="1" class="dd-handle-SR widgets null col-xs-12" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c1743" class="widgets pointer radioButtonNone" type="radio" name="abMTA98382100" value="$$abMTA_98-382-100_option2" style="display:block;">
+<span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">&lt;form action="default" method="post" enctype="application/x-www-form-urlencoded"&gt;
+
+&lt;div&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="reset" value="Reset"&gt;
+&lt;/div&gt;</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The form tag and input fields suitable for this scenario are:
+
+<br><br>&lt;form method="post" enctype="application/x-www-form-urlencoded"&gt;
+
+<br><br>&lt;div&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;input type="submit" value="Submit"&gt;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &lt;input type="reset" value="Reset"&gt;
+<br>&lt;/div&gt;
+
+<br><br>In the form tag, the action attribute is used to indicate where the form data is submitted. Since by default the data is submitted to the same page, there is no need to indicate the action attribute.
+
+<br><br>Also, you can indicate the type of input to be submit or reset. The submit button will submit the form data to the page specified in the action attribute. The default is the same page in this case.
+
+<br><br>The reset type can be used to clear out the field values. If you are filling out a long form, and for some reason you decided to start over, you can click on this button and all input elements will be cleared out. Note that the type needs to be reset and the value attribute is the text showing on the button.
+
+<br><br>You should not use the following form actions:
+
+<br><br>&lt;form action="default" ...&gt;
+
+<br><br>&lt;form action=http://localhost/default.html ...&gt;
+
+<br><br>The requirement is to submit to the same page by default, and the name of the page to submit to was not specified in the requirement.
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Complete and debug code that retrieves input from forms and sets form field values<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Your First HTML Form</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

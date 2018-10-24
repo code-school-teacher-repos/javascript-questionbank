@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code that uses objects<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 135px;"><p id="stemText" class="stemFont">A date is created using the following statement:
+
+<br><br>var d = new Date(2017,11,17,8,53,9);
+
+<br><br>Which three statements are valid regarding this date? Each correct answer presents a complete solution.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px; "><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="checkbox1" tabindex="1" cid="c811" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382043" value="$$abMTA_98-382-043_option1" style="display:block;">
+<span id="span_checkbox1" style="position: relative !important;display: block;" class="spanSingleChoice">Time: 1513518789000 represents the number of seconds since January 1, 1900.</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox4" tabindex="1" cid="c814" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382043" value="$$abMTA_98-382-043_option4" style="display:block;">
+<span id="span_checkbox4" style="position: relative !important;display: block;" class="spanSingleChoice">d.getDate() returns 17.</span></div><div class="dd-handle-SR widgets null col-xs-12" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox3" tabindex="1" cid="c813" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382043" value="$$abMTA_98-382-043_option3" style="display:block;">
+<span id="span_checkbox3" style="position: relative !important;display: block;" class="spanSingleChoice">d.getDay() returns 0 to represent Monday.</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="checkbox2" tabindex="1" cid="c812" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382043" value="$$abMTA_98-382-043_option2" style="display:block;">
+<span id="span_checkbox2" style="position: relative !important;display: block;" class="spanSingleChoice">Calling d.toLocaleTimeString() will result in  8:53:09 AM.</span></div><div class="dd-handle-SR widgets null col-xs-12 correctAnswer" tabindex="1" style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="checkbox0" tabindex="1" cid="c810" class="widgets pointer radioButtonNone" type="checkbox" name="abMTA98382043" value="$$abMTA_98-382-043_option0" style="display:block;">
+<span id="span_checkbox0" style="position: relative !important;display: block;" class="spanSingleChoice">Calling d.toLocaleDateString() will result in 12/17/2017.</span></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The following statements are true about the date object:
+
+<br><br>Calling d.toLocaleDateString() will result in  12/17/2017
+<br>Calling d.toLocaleTimeString() will result in  8:53:09 AM
+<br>d.getDate() returns 17
+
+<br><br>There are four different ways to construct a Date object. The one used in this question is constructed using year, month, date, hours, minutes, seconds. Since the month starts at 0 (January), the value 11 is for December, not November.
+
+<br><br>The locale time string of 8:53:09 AM is correct as specified in the Date constructor since the last three parameters (8, 53, and 9) represent the hours, minutes, and seconds respectively. By calling d.toLocalTimeString(), the time is formatted properly as 8:53:09 AM.
+
+<br><br>The getDate() function returns the day of the month (1 - 31). The value 17 is correct based on the constructor new Date(2017,11,17,8,53,9). The third parameter, 17, corresponds to the day of the month returned by getDate().
+
+<br><br>The time: 1513518789000 represents the number of seconds, but that will be since January 1, 1970, not since January 1, 1900.
+
+<br><br>The call to d.getDay() returns 0.  It returns the day of the week (0-6). 0 is Sunday, not Monday.
+<br><br><p>Objective:</p><p>Program with Variables, Data Types, and Functions</p><p>SubObjective:</p><p>Complete and debug code that uses objects<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Working with objects</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Object</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" tabindex="190">Click here for more information</a></p><br><p>MDN</p><p>Mozilla</p><p>Date</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

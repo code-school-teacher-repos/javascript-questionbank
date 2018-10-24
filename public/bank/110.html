@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Complete and debug code to perform input validation<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 159px;"><p id="stemText" class="stemFont">You are adjusting a web application to support 5 or 9 digit postal codes. You are working on the form shown in the answer area.
+
+<br><br>You need to design the pattern for the input.
+
+<br><br>Which pattern should you use? To answer, select the appropriate option from the drop-down menu.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img src="./110_files/abMTA_98-382-110.jpg" alt="Question includes an image that is part of the question and must be understood in order answer the question."><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div cid="c1932" class="widgets undefined" style="left: 150px; top: 131px; width: 231px; height: 21px; z-index: 1;"><span style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+<div id="select0DIV">
+	<select id="select0" tabindex="-1" class="selects correctAnswerBackground" style="display: table-cell; width: 100%; height: 100%;"><option selected="selected" value=""></option>
+	<option value="^\d{5}-\d{4}$">^\d{5}-\d{4}$</option><option value="^\d{5}[ -][0-9]$">^\d{5}[ -][0-9]$</option><option value="^\d{5}(\d{4})?$">^\d{5}(\d{4})?$</option><option value="^\d{5}(-\d{4})?$">^\d{5}(-\d{4})?$</option></select>
+</div></div><div id="overlayAnswer"></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The correct pattern to use for the 5 or 9 digit zip code support is:
+
+<br><br>^\d{5}(-\d{4})?$
+
+<br><br>This pattern starts with 5 digits followed by an optional section (surrounded by parentheses). That section contains a dash followed by 4 digits. In other words, the user can enter 5 digits, or 5 followed by a dash and 4 more digits.
+
+<br><br>The pattern ^\d{5}(\d{4})?$ is not valid because it ignores the dash between the 5 and 4 digits.
+
+<br><br>The pattern ^\d{5}-\d{4}$ is not valid either because it removes the parentheses and question mark, making the dash and 4 additional digits required. In other words, the user does not have the option to only enter 5 digit zip codes.
+
+<br><br>The pattern ^\d{5}[ -][0-9]$ is incorrect. It supports the 5 digits, but then it requires a space or a dash followed by only one digit between 0 and 9.
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Complete and debug code to perform input validation<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>Form data validation</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" tabindex="190">Click here for more information</a></p><br><p>Web resource</p><p>-</p><p>Regular Expressions Quick Start</p><p><a target="_blank" href="https://www.regular-expressions.info/quickstart.html" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

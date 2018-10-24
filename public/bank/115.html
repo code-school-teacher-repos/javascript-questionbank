@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interact with HTML Forms</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Interact with HTML Forms
+</div>
+<div class="jsSubConcepts">
+    SubObjective:</p><p>Describe the form submission process<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 183px;"><p id="stemText" class="stemFont">You are creating the form shown in the work area. If the user enters "James&amp;" in the first name and "My Last Name!" in the last name, the data submitted to the server will be encoded as:
+
+<br><br>firstName=James%26&amp;lastName=My+Last+Name%21
+
+<br><br>You need to complete the form. What should you do? To answer, select the appropriate options from the drop-down menus.</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 600px !important;">
+                    <div id="mainSlide" style="width: 100%; max-width: 960px;  position: absolute;"><img src="./115_files/abMTA_98-382-115.jpg" alt="Question includes an image that is part of the question and must be understood in order answer the question."><div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+   
+</div><div cid="c2010" class="widgets undefined" style="left: 123px; top: 63px; width: 130px; height: 21px; z-index: 1;"><span style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+<div id="select0DIV">
+	<select id="select0" tabindex="-1" class="selects correctAnswerBackground" style="display: table-cell; width: 100%; height: 100%;"><option selected="selected" value=""></option>
+	<option value="get">get</option><option value="post">post</option></select>
+</div></div><div cid="c2011" class="widgets undefined" style="left: 123px; top: 102px; width: 276px; height: 21px; z-index: 1;"><span style="display: table-cell;text-align: right;padding-right: 5px;"></span>
+<div id="select1DIV">
+	<select id="select1" tabindex="-1" class="selects correctAnswerBackground" style="display: table-cell; width: 100%; height: 100%;"><option selected="selected" value=""></option>
+	<option value="application/x-www-form-urlencoded">application/x-www-form-urlencoded</option><option value="multipart/form-data">multipart/form-data</option><option value="text/plain">text/plain</option></select>
+</div></div><div id="overlayAnswer"></div></div>
+                </div>
+                
+</div>
+</div>
+<button  onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+                    <div id="explanationHeader">
+                        <div id="expandExplanation" class="collapseExplanation"></div>
+                        <p id="explanationHeaderText">Explanation</p>
+                    </div>
+                    <div id="explanationBody" class="scrollable">
+                        <p id="explanationBodyText">The correct method and enctype are:
+
+<br><br>method="post" enctype="application/x-www-form-urlencoded"
+
+<br><br>The enctype attribute is only used with the post method, so the method="get" option is not applicable. With the post method, there are three enctypes:
+
+<br><br>application/x-www-form-urlencoded: This is the default. With this option, all characters are encoded. All spaces are replaced with '+', and the special characters are converted to ASCII HEX.
+
+<br><br>multipart/form-data: This is used with a file upload control, and no characters are encoded.
+
+<br><br>text/plain: With this type,  the special characters are not encoded, and the spaces are replaced with '+'.
+
+<br><br>Looking at the submitted data in the requirement:
+
+<br><br>firstName=James%26&amp;lastName=My+Last+Name%21
+
+<br><br>It is clear that the spaces are replaced with '+' and there are HEX values for the special characters entered by the user after the first and last name:
+
+<br><br>First name: James&amp;
+<br>Last name: My Last Name!
+
+<br><br>Therefore the enctype must be: application/x-www-form-urlencoded.
+<br><br><p>Objective:</p><p>Interact with HTML Forms</p><p>SubObjective:</p><p>Describe the form submission process<br><br></p><p>References</p><p>MDN</p><p>Mozilla</p><p>&lt;form&gt;</p><p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" tabindex="190">Click here for more information</a></p><br></p>
+                    </div>
+                </div>
+            </div>            
+            <div id="console" class="hidden"></div>
+        </div>  
+        <div id="hintDialog"></div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+</body>
+</html>

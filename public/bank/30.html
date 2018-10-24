@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Program with Variables, Data Types, and Functions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style type="text/css">
+        .spanSingleChoice {
+            padding-left: 72px;
+            width: 97%;
+            min-height: 50px;
+            overflow: inherit;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+            white-space: pre-line;
+        }
+
+        .jsQuestion {
+            padding: 5px;
+            background-color: antiquewhite;
+        }
+
+        .jsAnswers {
+            padding: 5px;
+            background-color: aquamarine;
+        }
+
+        .jsExplanation {
+            padding: 5px;
+            background-color: khaki;
+        }
+
+        .jsConcepts {
+            padding: 25px;
+            font-size: large;
+            background-color: aliceblue;
+        }
+
+        .jsSubConcepts {
+            padding: 25px;
+            font-size: medium;
+            background-color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="jsConcepts">
+    Program with Variables, Data Types, and Functions
+</div>
+<div class="jsSubConcepts">
+    SubObjective:<p>Declare and use variables of primitive data types<br><br>
+</div>
+<div class="jsQuestion">
+    <div id="questionStem" class="stem" style="height: 711px;"><p id="stemText" class="stemFont">The following code
+        snippet declares some variables and calls a function to print their types:
+        <code>
+            <br><br> var x;
+            <br> var y = true;
+            <br> var z = 123;
+            <br> var t = 34.65;
+            <br> var u = 'JavaScript';
+            <br> var v = { first: 'JavaScript', last: 'Tester' };
+            <br> var w = new Date();
+            <br> var m = null;
+            <br> var n = undefined;
+
+            <br><br> function findType() {
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var result = `type of x: ${typeof (x)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of y: ${typeof (y)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of z: ${typeof (z)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of t: ${typeof (t)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of u: ${typeof (u)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of v: ${typeof (v)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of w: ${typeof (w)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of m: ${typeof (m)}\n
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; type of n: ${typeof (n)}\n`
+
+            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert(result);
+            <br> }
+
+            <br><br> findType();
+        </code>
+        <br><br>What are the types of the variables?</p></div>
+</div>
+<div class="jsAnswers">
+    <div id="application" class="scrollable" style="width: 100%; max-width: 960px; height: 100%;">
+        <div id="mainSlide" style="width: 100%; max-width: 960px; ">
+            <div id="backgroundWidget" class="widgets" style="width:100%;height:100%">
+
+            </div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 2%;"><input id="radio3" cid="c608"
+                                                                                        class="widgets pointer radioButtonNone"
+                                                                                        type="radio"
+                                                                                        name="abMTA98382030"
+                                                                                        value="$$abMTA_98-382-030_option3"
+                                                                                        style="display:block;">
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">type of x: undefined
+type of y: boolean
+type of z: number
+type of t: number
+type of u: string
+type of v: object
+type of w: date
+type of m: null
+type of n: undefined</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio2" cid="c607"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382030"
+                                                                                         value="$$abMTA_98-382-030_option2"
+                                                                                         style="display:block;">
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">type of x: undefined
+type of y: boolean
+type of z: number
+type of t: float
+type of u: string
+type of v: object
+type of w: object
+type of m: null
+type of n: undefined</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
+                 style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c605"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382030"
+                                                                                         value="$$abMTA_98-382-030_option0"
+                                                                                         style="display:block;">
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">type of x: undefined
+type of y: boolean
+type of z: number
+type of t: number
+type of u: string
+type of v: object
+type of w: object
+type of m: object
+type of n: undefined</span></div>
+            <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
+                 style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c606"
+                                                                                         class="widgets pointer radioButtonNone"
+                                                                                         type="radio"
+                                                                                         name="abMTA98382030"
+                                                                                         value="$$abMTA_98-382-030_option1"
+                                                                                         style="display:block;">
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">type of x: null
+type of y: boolean
+type of z: number
+type of t: float
+type of u: string
+type of v: object
+type of w: object
+type of m: undefined
+type of n: undefined</span></div>
+        </div>
+    </div>
+
+</div>
+</div>
+<button onclick=$('#showanswer').toggle()>Show/Hide Answer</button>
+<div id="showanswer" class="jsExplanation" style="display: none">
+
+    <div id="explanationDiv" style="">
+        <div id="explanationHeader">
+            <div id="expandExplanation" class="collapseExplanation"></div>
+            <p id="explanationHeaderText">Explanation</p>
+        </div>
+        <div id="explanationBody" class="scrollable">
+            <p id="explanationBodyText">The correct types of the variables declared is as follows:
+
+                <br><br>type of x: undefined
+                <br>type of y: boolean
+                <br>type of z: number
+                <br>type of t: number
+                <br>type of u: string
+                <br>type of v: object
+                <br>type of w: object
+                <br>type of m: object
+                <br>type of n: undefined
+
+                <br><br>Variables in JavaScript can be declared using the var, let, or const keywords. Unlike other
+                programming languages such as C# and Java, declaring a variable in JavaScript does not include the type.
+                For example, to declare a variable that contains the course name, you use the following:
+
+                <br><br>var courseName = "Intro to JavaScript";
+
+                <br><br>JavaScript will "understand" that this is a string because of the initialization. But that does
+                not stop the developer from placing another type in courseName. For instance, the following is allowed:
+
+                <br><br>courseName = 2475;
+
+                <br><br>In order to determine the type of the variable, the typeof operator is used. In this scenario,
+                multiple variables are declared. Some of them are initialized, and others are not. When a variable is
+                not initialized, its type is undefined. When initialized, JavaScript is able to determine the type of
+                the variable. For example, setting y to true, will make y of type boolean. There are other exceptions,
+                however, such as setting z to 123 and t to 34.65 will make them both numbers. Also, v is an object and w
+                is an object as well (not a date).
+                <br><br>
+            <p>Objective:</p>
+            <p>Program with Variables, Data Types, and Functions</p>
+            <p>SubObjective:</p>
+            <p>Declare and use variables of primitive data types<br><br></p>
+            <p>References</p>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>var</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"
+                  tabindex="190">Click here for more information</a></p><br>
+            <p>MDN</p>
+            <p>Mozilla</p>
+            <p>typeof</p>
+            <p><a target="_blank"
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof"
+                  tabindex="190">Click here for more information</a></p><br></p>
+        </div>
+    </div>
+</div>
+<div id="console" class="hidden"></div>
+</div>
+<div id="hintDialog"></div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+</body>
+</html>
