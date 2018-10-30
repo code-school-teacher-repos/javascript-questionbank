@@ -54,66 +54,32 @@
     SubObjective:</p><p>Implement exception handling<br><br>
 </div>
 <div class="jsQuestion">
-    <div id="questionStem" class="stem" style="height: 1143px;"><p id="stemText" class="stemFont">You have the following
-        web page:
-        <code>
-            <br><br>&lt;!DOCTYPE html&gt;
-            <br>&lt;html&gt;
-            <br>&lt;head&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;title&gt;Intro to JavaScript&lt;/title&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;meta charset="utf-8" /&gt;
-            <br>&lt;/head&gt;
-            <br>&lt;body&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;script&gt;
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            showMeTheLog();
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (ex) {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            console.log(ex)
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; finally {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            console.log('Finally');
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+    <div id="questionStem" class="stem" style="height: 800px;"><p id="stemText" class="stemFont">You have the following
+        web page accessed at http://localhost/index.html
+        <code><br/><br/>
+            &lt;!DOCTYPE html&gt;<br/>
+            &lt;html&gt;<br/>
+            &lt;head&gt;<br/>
+            <br>&nbsp;&lt;title&gt;Intro to JavaScript&lt;/title&gt;
+            <br>&nbsp;&lt;meta charset=&quot;utf-8&quot;/&gt;<br/>
+            &lt;/head&gt;<br/>
+            &lt;body&gt;<br/>
+            <br>&nbsp;&lt;script&gt;
+            <br>&nbsp;try {
+            <br>&nbsp;showMeTheLog();
+            <br>&nbsp;}
 
-            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function showMeTheLog() {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            undefined.parseInt('1234');
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-
-            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (e
-            if e
-            instanceof TypeError) {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            logIt(e);
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (e if e
-            instanceof SyntaxError) {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            logIt(e);
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (e if e
-            instanceof RangeError) {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            logIt(e);
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (e) {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            logIt(e);
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-
-            <br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; function logIt(e) {
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            console.log(`${e
-            instanceof TypeError}::${e.message}::${e.name}::${e.fileName}`);
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/script&gt;
-            <br>&lt;/body&gt;
-            <br>&lt;/html&gt;
+            <br>&nbsp;catch (e) {
+            <br>&nbsp;logIt(e);
+            <br>&nbsp;}
+            <br>&nbsp;
+            <br>&nbsp;// FUNCTION TO LOG EXCEPTIONS
+            <br>&nbsp;function logIt(e) {
+            <br>&nbsp;console.log(`${e instanceof TypeError}::${e.message}::${e.name}`);
+            <br>&nbsp;}
+            <br>&nbsp;&lt;/script&gt;<br/>
+            &lt;/body&gt;<br/>
+            &lt;/html&gt;<br/><br/>
         </code>
         <br><br>What will be displayed in the console when the page is loaded in the browser?</p></div>
 </div>
@@ -130,8 +96,8 @@
                                                                                         name="abMTA98382023"
                                                                                         value="$$abMTA_98-382-023_option2"
                                                                                         style="display:block;">
-                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">false::missing ; before statement::SyntaxError::http://localhost:33931/SubObjective_1_4_5.html
-Finally</span></div>
+                <span id="span_radio2" style="position: relative !important;display: block;" class="spanSingleChoice">Nothing will be logged
+</span></div>
             <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
                  style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio1" cid="c479"
                                                                                          class="widgets pointer radioButtonNone"
@@ -139,8 +105,8 @@ Finally</span></div>
                                                                                          name="abMTA98382023"
                                                                                          value="$$abMTA_98-382-023_option1"
                                                                                          style="display:block;">
-                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">true::undefined has no properties::TypeError::http://localhost:33931/SubObjective_1_4_5.html
-Finally</span></div>
+                <span id="span_radio1" style="position: relative !important;display: block;" class="spanSingleChoice">false::showMeTheLog is not defined::ReferenceError
+</span></div>
             <div tabindex="1" class="dd-handle-SR widgets null col-xs-12"
                  style="left: 20px; width: 920px; height: auto; margin-top: 0px;"><input id="radio3" cid="c481"
                                                                                          class="widgets pointer radioButtonNone"
@@ -148,9 +114,9 @@ Finally</span></div>
                                                                                          name="abMTA98382023"
                                                                                          value="$$abMTA_98-382-023_option3"
                                                                                          style="display:block;">
-                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">true::undefined is not an object::TypeError::http://localhost:33931/SubObjective_1_4_5.html
-Error: undefined is not an object
-Finally</span></div>
+                <span id="span_radio3" style="position: relative !important;display: block;" class="spanSingleChoice">true::undefined is not an object::TypeError
+
+</span></div>
             <div tabindex="1" class="dd-handle-SR widgets null col-xs-12 correctAnswer"
                  style="left: 20px; margin-top: 0px; width: 920px; height: auto;"><input id="radio0" cid="c478"
                                                                                          class="widgets pointer radioButtonNone"
@@ -158,8 +124,8 @@ Finally</span></div>
                                                                                          name="abMTA98382023"
                                                                                          value="$$abMTA_98-382-023_option0"
                                                                                          style="display:block;">
-                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">true::undefined has no properties::TypeError::http://localhost:33931/SubObjective_1_4_5.html
-Finally</span></div>
+                <span id="span_radio0" style="position: relative !important;display: block;" class="spanSingleChoice">true::undefined has no properties
+</span></div>
         </div>
     </div>
 
